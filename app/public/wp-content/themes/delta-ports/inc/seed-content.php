@@ -21,31 +21,6 @@ function delta_ports_on_theme_switch() {
 add_action( 'after_switch_theme', 'delta_ports_on_theme_switch' );
 
 /**
- * Ensure the WWA page exists (one-time, non-destructive).
- * Does not overwrite existing content; only creates if missing.
- */
-function delta_ports_ensure_wwa_page() {
-	if ( is_admin() && ! wp_doing_ajax() ) {
-		// Allow admin tools to run first; still safe on front.
-	}
-	if ( get_page_by_path( 'wwa' ) ) {
-		return;
-	}
-	if ( ! function_exists( 'delta_ports_content_wwa' ) ) {
-		return;
-	}
-	$id = delta_ports_upsert_page( 'wwa', 'WWA', delta_ports_content_wwa(), false );
-	if ( $id ) {
-		delta_ports_set_yoast_meta(
-			$id,
-			'WWA | Powering Your Projects with Unmatched Excellence',
-			'Heavy equipment, expert support, and a best-in-class fleet for construction and industrial projects.'
-		);
-	}
-}
-add_action( 'init', 'delta_ports_ensure_wwa_page', 30 );
-
-/**
  * Admin tool: Tools → Delta Ports Seed.
  */
 function delta_ports_seed_admin_menu() {
@@ -558,13 +533,6 @@ function delta_ports_seed_all( $force = false ) {
 			'seo_d'   => 'Contact Delta Ports offices or join our talent network.',
 		),
 		array(
-			'slug'    => 'wwa',
-			'title'   => 'WWA',
-			'content' => delta_ports_content_wwa(),
-			'seo_t'   => 'WWA | Powering Your Projects with Unmatched Excellence',
-			'seo_d'   => 'Heavy equipment, expert support, and a best-in-class fleet for construction and industrial projects.',
-		),
-		array(
 			'slug'    => 'privacy-policy',
 			'title'   => 'Privacy Policy',
 			'content' => delta_ports_content_privacy(),
@@ -696,7 +664,6 @@ function delta_ports_seed_menus() {
 				array( 'title' => 'Port-led operations', 'slug' => 'led-operation-new' ),
 				array( 'title' => 'Cargo Handling Capabilities', 'slug' => 'cargo-handling-capabilities' ),
 				array( 'title' => 'Integrated Port Logistics', 'slug' => 'integrated-port-logistics' ),
-				array( 'title' => 'WWA', 'slug' => 'wwa' ),
 			),
 		),
 		array( 'title' => 'Sustainability', 'slug' => 'sustainability' ),

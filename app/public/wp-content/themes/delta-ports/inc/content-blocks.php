@@ -21,4 +21,3 @@ function delta_ports_img( $rel ) {
 }
 
 require_once DELTA_PORTS_DIR . '/inc/gutenberg-pages.php';
-require_once DELTA_PORTS_DIR . '/inc/wwa-page.php';

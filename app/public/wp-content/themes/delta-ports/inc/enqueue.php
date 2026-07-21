@@ -41,8 +41,8 @@ function delta_ports_enqueue_assets() {
 		$ver
 	);
 
-	// Homepage + About styles. WWA reuses .dp-home-hero banner pattern.
-	if ( is_front_page() || is_page( array( 'about-us', 'home', 'home-upgrade', 'wwa' ) ) ) {
+	// Homepage + About styles.
+	if ( is_front_page() || is_page( array( 'about-us', 'home', 'home-upgrade' ) ) ) {
 		wp_enqueue_style(
 			'delta-ports-home-live',
 			DELTA_PORTS_URI . '/assets/css/home-live.css',
@@ -135,16 +135,6 @@ function delta_ports_enqueue_assets() {
 				'in_footer' => true,
 				'strategy'  => 'defer',
 			)
-		);
-	}
-
-	// WWA marketing page — isolated CSS only on /wwa/.
-	if ( is_page( 'wwa' ) ) {
-		wp_enqueue_style(
-			'delta-ports-wwa-home',
-			DELTA_PORTS_URI . '/assets/css/wwa-home.css',
-			array( 'delta-ports-main' ),
-			$ver
 		);
 	}
 
