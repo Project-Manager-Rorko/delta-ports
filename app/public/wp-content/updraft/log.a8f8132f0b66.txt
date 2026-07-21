@@ -1,0 +1,318 @@
+0000.001 (0) Opened log file at time: Mon, 20 Jul 2026 12:11:12 +0000 on http://delta-ports.local
+0000.013 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.26.5 WP: 7.0.2 PHP: 8.2.29 (cgi-fcgi, Windows NT RORKO_DEV 10.0 build 26200 (Windows 11) AMD64) MySQL: 8.4.0 (max packet size=1073741824) WPLANG: en_US Server: nginx/1.26.1 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 4.6M | 6M) multisite: N openssl: OpenSSL 3.0.15 3 Sep 2024 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0000.024 (0) Free space on disk containing Updraft's temporary directory: 298058.5 MB
+0000.073 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.098 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.131 (0) Set semaphore last lock (fd) time to 2026-07-20 12:11:12
+0000.145 (0) Semaphore lock (fd) complete
+0000.184 (0) Backup run: resumption=0, nonce=a8f8132f0b66, file_nonce=a8f8132f0b66 begun at=1784549472 (0s ago), job type=backup
+0000.202 (0) Scheduling a resumption (1) after 300 seconds (1784549772) in case this run gets aborted
+0000.234 (0) Checking if we have a zip executable available
+0000.254 (0) Creation of backups of directories: beginning
+0000.286 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0003.412 (0) Total entities for the zip file: 765 directories, 3949 files (0 skipped as non-modified), 69.8 MB
+0003.430 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0003.618 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 100 files added (on-disk size: 141.7 KB)
+0003.697 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 200 files added (on-disk size: 141.7 KB)
+0003.777 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 300 files added (on-disk size: 141.7 KB)
+0003.854 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 400 files added (on-disk size: 141.7 KB)
+0003.928 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 500 files added (on-disk size: 141.7 KB)
+0003.966 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.2 MB, 3949 files batched, 539 (540) added so far); re-opening (prior size: 141.7 KB)
+0032.365 (0) A useful amount of data was added after this amount of zip processing: 29.5 s (normalised: 29.2 s, rate: 875.4 KB/s)
+0032.512 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 600 files added (on-disk size: 8823 KB)
+0032.677 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 700 files added (on-disk size: 8823 KB)
+0032.854 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 800 files added (on-disk size: 8823 KB)
+0032.995 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 900 files added (on-disk size: 8823 KB)
+0033.152 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1000 files added (on-disk size: 8823 KB)
+0033.353 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1100 files added (on-disk size: 8823 KB)
+0033.480 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1200 files added (on-disk size: 8823 KB)
+0033.591 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1300 files added (on-disk size: 8823 KB)
+0033.711 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1400 files added (on-disk size: 8823 KB)
+0033.725 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25 MB, 3949 files batched, 863 (1403) added so far); re-opening (prior size: 8823 KB)
+0092.868 (0) A useful amount of data was added after this amount of zip processing: 61 s (normalised: 61 s, rate: 419.6 KB/s)
+0093.095 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1500 files added (on-disk size: 16046 KB)
+0093.322 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1600 files added (on-disk size: 16046 KB)
+0093.475 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1700 files added (on-disk size: 16046 KB)
+0093.711 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1800 files added (on-disk size: 16046 KB)
+0093.932 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 1900 files added (on-disk size: 16046 KB)
+0094.120 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2000 files added (on-disk size: 16046 KB)
+0094.328 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2100 files added (on-disk size: 16046 KB)
+0094.475 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2200 files added (on-disk size: 16046 KB)
+0094.712 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2300 files added (on-disk size: 16046 KB)
+0095.103 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2400 files added (on-disk size: 16046 KB)
+0095.130 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (6.6 MB, 3949 files batched, 1001 (2404) added so far); re-opening (prior size: 16046 KB)
+0151.828 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2500 files added (on-disk size: 18520.1 KB)
+0151.930 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2600 files added (on-disk size: 18520.1 KB)
+0152.057 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2700 files added (on-disk size: 18520.1 KB)
+0152.184 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2800 files added (on-disk size: 18520.1 KB)
+0152.304 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 2900 files added (on-disk size: 18520.1 KB)
+0152.429 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3000 files added (on-disk size: 18520.1 KB)
+0152.550 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3100 files added (on-disk size: 18520.1 KB)
+0152.685 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3200 files added (on-disk size: 18520.1 KB)
+0152.808 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3300 files added (on-disk size: 18520.1 KB)
+0152.921 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3400 files added (on-disk size: 18520.1 KB)
+0152.938 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (10.8 MB, 3949 files batched, 1001 (3405) added so far); re-opening (prior size: 18520.1 KB)
+0194.465 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3500 files added (on-disk size: 21697.1 KB)
+0194.617 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3600 files added (on-disk size: 21697.1 KB)
+0194.769 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3700 files added (on-disk size: 21697.1 KB)
+0194.920 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3800 files added (on-disk size: 21697.1 KB)
+0195.053 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.tmp: 3900 files added (on-disk size: 21697.1 KB)
+0212.716 (0) Creating zip file manifest (backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.list-temp.tmp)
+0212.757 (0) Successfully created zip file manifest (size: 338351)
+0213.085 (0) Created plugins zip (0) - 22403.4 KB in 212.8 s (105.3 KB/s) (sha1: 440b438efe1461f45f57b560a2fb8a106874436f, sha256: 4303a699573aedd7035b0286cb2158d925a61c36ec48bba4f0b8c28e68e15d17)
+0213.121 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0213.128 (0) No remote despatch: user chose no remote backup service
+0213.138 (0) Recording as successfully uploaded: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip
+0213.163 (0) Deleting zip manifest (backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip.list.tmp)
+0213.187 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0213.195 (0) Number of backup sets in history: 2; groups (db): 1
+0213.202 (0) Examining (for databases) backup set with group_id=0, nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0213.212 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0213.223 (0) Examining (for databases) backup set with group_id=0, nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0213.223 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0213.224 (0) Number of backup sets in history: 2; groups (files): 1
+0213.234 (0) Examining (for files) backup set with nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0213.234 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0213.244 (0) Examining (for files) backup set with nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0213.244 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0213.245 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0213.288 (0) Beginning creation of dump of themes (split every: 400 MB)
+0213.581 (0) Total entities for the zip file: 37 directories, 482 files (0 skipped as non-modified), 86.1 MB
+0213.672 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0213.772 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0213.792 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (51.5 MB, 482 files batched, 209 (209) added so far); re-opening (prior size: 0 KB)
+0215.274 (0) A useful amount of data was added after this amount of zip processing: 2.4 s (normalised: 1.2 s, rate: 21633.8 KB/s)
+0215.294 (0) Performance is good - will increase the amount of data we attempt to batch (time=2.4382140636444, normalised_time=1.1833309342595, max_time=215.28216004372, data points known=1, old_max_bytes=26214400, new_max_bytes=209715200)
+0215.389 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-themes.zip.tmp: 300 files added (on-disk size: 50698.2 KB)
+0215.488 (0) Zip: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-themes.zip.tmp: 400 files added (on-disk size: 50698.2 KB)
+0225.349 (0) Creating zip file manifest (backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-themes.zip.list-temp.tmp)
+0225.364 (0) Successfully created zip file manifest (size: 34269)
+0226.413 (0) Created themes zip (0) - 85351.1 KB in 13.1 s (6513.8 KB/s) (sha1: bc208fb21ac3f34392754b5f6a6d47b936f501f2, sha256: 3fcf20caa042afd8212f56a035b8eb9ad10a71cec968ea1de078b127d235b58c)
+0226.447 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0226.458 (0) No remote despatch: user chose no remote backup service
+0226.469 (0) Recording as successfully uploaded: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-themes.zip
+0226.485 (0) Deleting zip manifest (backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-themes.zip.list.tmp)
+0226.502 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0226.513 (0) Number of backup sets in history: 2; groups (db): 1
+0226.524 (0) Examining (for databases) backup set with group_id=0, nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0226.534 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0226.546 (0) Examining (for databases) backup set with group_id=0, nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0226.546 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0226.546 (0) Number of backup sets in history: 2; groups (files): 1
+0226.557 (0) Examining (for files) backup set with nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0226.557 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0226.565 (0) Examining (for files) backup set with nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0226.565 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0226.565 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0226.606 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots,wp-staging
+0226.617 (0) Looking for candidates to backup in: C:\Users\shanm\Local Sites\delta-ports\app\public/wp-content/uploads
+0226.628 (0) finding files: 2026: adding to list (1)
+0226.636 (0) finding files: wpcf7_uploads: adding to list (2)
+0226.643 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0226.680 (0) Total entities for the zip file: 3 directories, 12 files (0 skipped as non-modified), 0.2 MB
+0226.833 (0) Creating zip file manifest (backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-uploads.zip.list-temp.tmp)
+0226.847 (0) Successfully created zip file manifest (size: 685)
+0226.894 (0) Created uploads zip (0) - 175.4 KB in 0.2 s (766 KB/s) (sha1: 0be9aadbcd091bd2d12cc3be236acafaabe0c498, sha256: bb84a0bacb89a84bded0f6033604ed7d85ba6af5c0b6e5aa9e22da1acbfad17f)
+0227.050 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0227.062 (0) No remote despatch: user chose no remote backup service
+0227.071 (0) Recording as successfully uploaded: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-uploads.zip
+0227.087 (0) Deleting zip manifest (backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-uploads.zip.list.tmp)
+0227.107 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0227.118 (0) Number of backup sets in history: 2; groups (db): 1
+0227.129 (0) Examining (for databases) backup set with group_id=0, nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0227.129 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0227.140 (0) Examining (for databases) backup set with group_id=0, nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0227.140 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0227.140 (0) Number of backup sets in history: 2; groups (files): 1
+0227.148 (0) Examining (for files) backup set with nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0227.148 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0227.156 (0) Examining (for files) backup set with nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0227.156 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0227.156 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0227.186 (0) No backup of mu-plugins: excluded by user's options
+0227.206 (0) Beginning backup of other directories found in the content directory (index: 0)
+0227.216 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0227.223 (0) Looking for candidates to backup in: C:\Users\shanm\Local Sites\delta-ports\app\public/wp-content
+0227.230 (0) finding files: index.php: adding to list (1)
+0227.238 (0) finding files: plugins: skipping: this is the plugins directory
+0227.247 (0) finding files: themes: skipping: this is the themes directory
+0227.258 (0) finding files: updraft: skipping: this is the updraft directory
+0227.269 (0) finding files: upgrade: skipping: excluded by options
+0227.280 (0) finding files: uploads: skipping: this is the uploads directory
+0227.307 (0) Total entities for the zip file: 0 directories, 1 files (0 skipped as non-modified), 0 MB
+0227.364 (0) Creating zip file manifest (backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-others.zip.list-temp.tmp)
+0227.376 (0) Successfully created zip file manifest (size: 43)
+0227.420 (0) Created others zip (0) - 0.1 KB in 0.1 s (1.2 KB/s) (sha1: de53b11be152f8b5f570d08a328fe56c166962a8, sha256: 174c32dcc427c2a7d408649a6e1ba98afaac060c8f1e09bc5666220803c3c9ac)
+0227.544 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0227.551 (0) No remote despatch: user chose no remote backup service
+0227.559 (0) Recording as successfully uploaded: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-others.zip
+0227.578 (0) Deleting zip manifest (backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-others.zip.list.tmp)
+0227.600 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0227.611 (0) Number of backup sets in history: 2; groups (db): 1
+0227.619 (0) Examining (for databases) backup set with group_id=0, nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0227.619 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0227.626 (0) Examining (for databases) backup set with group_id=0, nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0227.626 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0227.626 (0) Number of backup sets in history: 2; groups (files): 1
+0227.713 (0) Examining (for files) backup set with nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0227.713 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0227.724 (0) Examining (for files) backup set with nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0227.724 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0227.724 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0227.782 (0) Saving backup status to database (elements: 8)
+0227.808 (0) Beginning creation of database dump (WordPress DB)
+0227.820 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+0227.959 (0) Table wp_options: Total expected rows (via COUNT): 207
+0227.973 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0228.103 (0) Table wp_options: Rows added in this batch (next record: 439): 202 (uncompressed bytes in this segment=947352) in 0.18 seconds
+0228.155 (0) Table wp_options: finishing file(s) (2, 224.3 KB)
+0228.179 (0) Table wp_users: Total expected rows (via COUNT): 1
+0228.190 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0228.212 (0) Table wp_users: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1404) in 0.04 seconds
+0228.248 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0228.291 (0) Table wp_usermeta: Total expected rows (via COUNT): 22
+0228.362 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0228.372 (0) Table wp_usermeta: Rows added in this batch (next record: 24): 22 (uncompressed bytes in this segment=2828) in 0.10 seconds
+0228.421 (0) Table wp_usermeta: finishing file(s) (2, 1.5 KB)
+0228.458 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0228.480 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=677) in 0.04 seconds
+0228.530 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0228.558 (0) Table wp_comments: Total expected rows (via COUNT): 1
+0228.568 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0228.591 (0) Table wp_comments: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=2118) in 0.04 seconds
+0228.624 (0) Table wp_comments: finishing file(s) (2, 0.7 KB)
+0228.660 (0) Table wp_links: Total expected rows (via COUNT): 0
+0228.679 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1298) in 0.03 seconds
+0228.712 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0228.757 (0) Table wp_postmeta: Total expected rows (via COUNT): 160
+0228.766 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0228.787 (0) Table wp_postmeta: Rows added in this batch (next record: 1394): 160 (uncompressed bytes in this segment=20178) in 0.05 seconds
+0228.839 (0) Table wp_postmeta: finishing file(s) (2, 4.5 KB)
+0229.005 (0) Table wp_posts: Total expected rows (via COUNT): 186
+0229.020 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0229.087 (0) Table wp_posts: Rows added in this batch (next record: 340): 186 (uncompressed bytes in this segment=1447862) in 0.23 seconds
+0229.131 (0) Table wp_posts: finishing file(s) (2, 172.9 KB)
+0229.159 (0) Table wp_term_relationships: Total expected rows (approximate): 13
+0229.176 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 13 (uncompressed bytes in this segment=856) in 0.02 seconds
+0229.214 (0) Table wp_term_relationships: finishing file(s) (2, 0.4 KB)
+0229.248 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 3
+0229.257 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0229.280 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=972) in 0.04 seconds
+0229.334 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.5 KB)
+0229.379 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0229.402 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=650) in 0.05 seconds
+0229.446 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0229.473 (0) Table wp_terms: Total expected rows (via COUNT): 3
+0229.483 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0229.503 (0) Table wp_terms: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=798) in 0.03 seconds
+0229.628 (0) Table wp_terms: finishing file(s) (2, 0.4 KB)
+0229.660 (0) Table wp_yoast_expiring_store: Total expected rows (approximate): 0
+0229.676 (0) Table wp_yoast_expiring_store: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=512) in 0.02 seconds
+0229.710 (0) Table wp_yoast_expiring_store: finishing file(s) (2, 0.3 KB)
+0229.753 (0) Table wp_yoast_indexable: Total expected rows (via COUNT): 0
+0229.767 (0) Table wp_yoast_indexable: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=3807) in 0.03 seconds
+0229.806 (0) Table wp_yoast_indexable: finishing file(s) (2, 1 KB)
+0229.835 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 0
+0229.848 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=734) in 0.02 seconds
+0229.883 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 0.4 KB)
+0229.913 (0) Table wp_yoast_migrations: Total expected rows (via COUNT): 26
+0229.923 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0229.943 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 26): 26 (uncompressed bytes in this segment=1270) in 0.04 seconds
+0230.033 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0230.062 (0) Table wp_yoast_primary_term: Total expected rows (via COUNT): 0
+0230.107 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=842) in 0.05 seconds
+0230.149 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.4 KB)
+0230.175 (0) Table wp_yoast_seo_links: Total expected rows (via COUNT): 0
+0230.184 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1038) in 0.01 seconds
+0230.225 (0) Table wp_yoast_seo_links: finishing file(s) (2, 0.4 KB)
+0230.249 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_options.table.tmpr440.gz (1/18/fopen): adding to final database dump
+0230.272 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_options.table.gz (2/18/fopen): adding to final database dump
+0230.280 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_users.table.tmpr2.gz (3/18/fopen): adding to final database dump
+0230.288 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_users.table.gz (4/18/fopen): adding to final database dump
+0230.338 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_usermeta.table.tmpr25.gz (5/18/fopen): adding to final database dump
+0230.348 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_usermeta.table.gz (6/18/fopen): adding to final database dump
+0230.359 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_commentmeta.table.tmpr0.gz (7/18/fopen): adding to final database dump
+0230.371 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_commentmeta.table.gz (8/18/fopen): adding to final database dump
+0230.380 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_comments.table.tmpr2.gz (9/18/fopen): adding to final database dump
+0230.389 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_comments.table.gz (10/18/fopen): adding to final database dump
+0230.397 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_links.table.tmpr0.gz (11/18/fopen): adding to final database dump
+0230.409 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_links.table.gz (12/18/fopen): adding to final database dump
+0230.421 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_postmeta.table.tmpr1395.gz (13/18/fopen): adding to final database dump
+0230.433 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_postmeta.table.gz (14/18/fopen): adding to final database dump
+0230.444 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_posts.table.tmpr341.gz (15/18/fopen): adding to final database dump
+0230.460 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_posts.table.gz (16/18/fopen): adding to final database dump
+0230.468 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_term_relationships.table.tmpr100001.gz (17/18/fopen): adding to final database dump
+0230.476 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_term_relationships.table.gz (18/18/fopen): adding to final database dump
+0230.484 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_term_taxonomy.table.tmpr4.gz (19/18/fopen): adding to final database dump
+0230.497 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_term_taxonomy.table.gz (20/18/fopen): adding to final database dump
+0230.508 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_termmeta.table.tmpr0.gz (21/18/fopen): adding to final database dump
+0230.519 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_termmeta.table.gz (22/18/fopen): adding to final database dump
+0230.528 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_terms.table.tmpr4.gz (23/18/fopen): adding to final database dump
+0230.536 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_terms.table.gz (24/18/fopen): adding to final database dump
+0230.543 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_expiring_store.table.tmpr1.gz (25/18/fopen): adding to final database dump
+0230.551 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_expiring_store.table.gz (26/18/fopen): adding to final database dump
+0230.561 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_indexable.table.tmpr0.gz (27/18/fopen): adding to final database dump
+0230.572 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_indexable.table.gz (28/18/fopen): adding to final database dump
+0230.583 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_indexable_hierarchy.table.tmpr1.gz (29/18/fopen): adding to final database dump
+0230.598 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_indexable_hierarchy.table.gz (30/18/fopen): adding to final database dump
+0230.605 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_migrations.table.tmpr27.gz (31/18/fopen): adding to final database dump
+0230.613 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_migrations.table.gz (32/18/fopen): adding to final database dump
+0230.620 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_primary_term.table.tmpr0.gz (33/18/fopen): adding to final database dump
+0230.628 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_primary_term.table.gz (34/18/fopen): adding to final database dump
+0230.699 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_seo_links.table.tmpr0.gz (35/18/fopen): adding to final database dump
+0230.710 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db-table-wp_yoast_seo_links.table.gz (36/18/fopen): adding to final database dump
+0230.738 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db.gz: finished writing out complete database file (410.4 KB)
+0230.795 (0) Total database tables backed up: 18 (backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db.gz, size: 420344, sha1: 7299f22cb414d35f27bf0299d9a0cc598015b36d, sha256: ffd8dc50c1a34fc83dd81f1733d7e39c953bff69e857acee513b2361003e4150)
+0230.837 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-plugins.zip: plugins: This file has already been successfully processed
+0230.845 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-themes.zip: themes: This file has already been successfully processed
+0230.852 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-uploads.zip: uploads: This file has already been successfully processed
+0230.864 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-others.zip: others: This file has already been successfully processed
+0230.874 (0) backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db.gz: db: This file has not yet been successfully uploaded: will queue
+0230.884 (0) Saving backup history. Total backup size: 105.8 MB
+0230.902 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0230.929 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0230.939 (0) No remote despatch: user chose no remote backup service
+0230.950 (0) Recording as successfully uploaded: backup_2026-07-20-1211_Delta_Ports_a8f8132f0b66-db.gz
+0231.070 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0231.082 (0) Number of backup sets in history: 3; groups (db): 1
+0231.098 (0) Examining (for databases) backup set with group_id=0, nonce=a8f8132f0b66, datestamp=1784549472 (Jul 20 2026 12:11:12)
+0231.107 (0) This backup set is the backup set just made, so will not be deleted.
+0231.107 (0) Examining (for databases) backup set with group_id=0, nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0231.107 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0231.114 (0) Examining (for databases) backup set with group_id=0, nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0231.114 (0) 1784537557: db: this set includes a database (backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-db.gz); db count is now 2
+0231.114 (0) 1784537557: db: over retain limit (2); will delete this database
+0231.114 (0) Delete file: backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-db.gz, service=none
+0231.122 (0) Deleting local copy (backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-db.gz)
+0231.140 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0231.153 (0) Number of backup sets in history: 3; groups (files): 1
+0231.166 (0) Examining (for files) backup set with nonce=a8f8132f0b66, datestamp=1784549472 (Jul 20 2026 12:11:12)
+0231.166 (0) This backup set is the backup set just made, so will not be deleted.
+0231.177 (0) This backup set is the backup set just made, so will not be deleted.
+0231.177 (0) This backup set is the backup set just made, so will not be deleted.
+0231.177 (0) This backup set is the backup set just made, so will not be deleted.
+0231.177 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0231.184 (0) Examining (for files) backup set with nonce=9d6fd73b006e, datestamp=1784541749 (Jul 20 2026 10:02:29)
+0231.184 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0231.185 (0) Examining (for files) backup set with nonce=2a1b5db14894, datestamp=1784537557 (Jul 20 2026 08:52:37)
+0231.185 (0) plugins: over retain limit (2); will delete this file entity
+0231.185 (0) themes: over retain limit (2); will delete this file entity
+0231.185 (0) uploads: over retain limit (2); will delete this file entity
+0231.185 (0) others: over retain limit (2); will delete this file entity
+0231.185 (0) Delete file: backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-plugins.zip, service=none
+0231.194 (0) Deleting local copy (backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-plugins.zip)
+0231.210 (0) Delete file: backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-themes.zip, service=none
+0231.221 (0) Deleting local copy (backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-themes.zip)
+0231.245 (0) Delete file: backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-uploads.zip, service=none
+0231.255 (0) Deleting local copy (backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-uploads.zip)
+0231.264 (0) Delete file: backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-others.zip, service=none
+0231.272 (0) Deleting local copy (backup_2026-07-20-0852_Delta_Ports_2a1b5db14894-others.zip)
+0231.292 (0) This backup set is now empty; will remove from history
+0231.302 (0) Deleting log file (log.2a1b5db14894.txt)
+0231.315 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0231.341 (0) Resume backup (a8f8132f0b66, 0): finish run
+0231.419 (0) Decremented the semaphore (fd) by 1
+0231.439 (0) Semaphore (fd) unlocked
+0231.450 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0231.474 (0) No email will/can be sent - the user has not configured an email address.
+0231.481 (0) The backup succeeded and is now complete
