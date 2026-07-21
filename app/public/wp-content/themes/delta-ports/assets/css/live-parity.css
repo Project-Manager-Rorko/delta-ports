@@ -1,0 +1,678 @@
+/**
+ * Live website visual parity layer for pure Gutenberg content.
+ * Matches vipaccounts.org/delta-ports spacing, type, cards, and media density.
+ */
+
+/* ---------- Base document ---------- */
+.wp-block-post-content,
+.entry-content {
+	font-family: "Geist", "geist", Sans-serif !important;
+	font-weight: 400;
+	color: #1a1a2e;
+	font-size: 1.02rem;
+	line-height: 1.7;
+}
+
+.wp-block-post-content h1,
+.entry-content h1 {
+	font-family: "Geist", "geist", Sans-serif !important;
+	font-weight: 400 !important;
+}
+
+.wp-block-post-content h2,
+.wp-block-post-content h3,
+.entry-content h2,
+.entry-content h3 {
+	font-family: "Geist", "geist", Sans-serif !important;
+	font-weight: 500 !important;
+}
+
+.wp-block-post-content > * {
+	margin-block-start: 0;
+}
+
+/* ---------- Heroes (home + inner) ---------- */
+.dp-gb-home-hero.wp-block-cover,
+.dp-gb-page-hero.wp-block-cover {
+	min-height: min(92vh, 820px) !important;
+	margin-top: calc(-1 * var(--dp-header-h, 72px)) !important;
+	padding: calc(var(--dp-header-h, 72px) + 3rem) 0 4rem !important;
+	border-radius: 0 !important;
+}
+
+.dp-gb-home-hero .wp-block-cover__inner-container,
+.dp-gb-page-hero .wp-block-cover__inner-container {
+	max-width: 1400px !important;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: clamp(1.15rem, 4vw, 2.5rem);
+	padding-right: clamp(1.15rem, 4vw, 2.5rem);
+}
+
+.dp-gb-home-hero .dp-gb-hero-title,
+.dp-gb-home-hero h1.wp-block-heading {
+	font-size: clamp(2.75rem, 7.5vw, 5.75rem) !important;
+	line-height: 0.98 !important;
+	letter-spacing: -0.04em !important;
+	font-weight: 400 !important;
+	color: #fff !important;
+	max-width: 14ch;
+	margin: 0 0 1.25rem !important;
+	text-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+}
+
+.dp-gb-page-hero h1.wp-block-heading {
+	font-size: clamp(2.2rem, 5vw, 3.75rem) !important;
+	line-height: 1.05 !important;
+	letter-spacing: -0.035em !important;
+	color: #fff !important;
+	max-width: 18ch;
+	margin: 0.35rem 0 0.85rem !important;
+}
+
+.dp-gb-hero-lead,
+.dp-gb-hero-intro {
+	font-size: clamp(1.05rem, 1.6vw, 1.25rem) !important;
+	line-height: 1.65 !important;
+	color: rgba(255, 255, 255, 0.9) !important;
+	max-width: 36rem !important;
+	margin: 0 0 1.5rem !important;
+}
+
+.dp-gb-home-hero .wp-block-button__link,
+.dp-gb-page-hero .wp-block-button__link {
+	border-radius: 999px !important;
+	padding: 0.9rem 1.4rem !important;
+	font-weight: 700 !important;
+}
+
+.dp-gb-home-hero .is-style-outline .wp-block-button__link,
+.dp-gb-page-hero .is-style-outline .wp-block-button__link {
+	background: transparent !important;
+	border: 1.5px solid rgba(255, 255, 255, 0.55) !important;
+	color: #fff !important;
+}
+
+.dp-gb-home-hero video.wp-block-cover__video-background {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+/* ---------- Section shells ---------- */
+.dp-gb-section {
+	padding: clamp(3.25rem, 7vw, 5.75rem) clamp(1.15rem, 4vw, 2.5rem) !important;
+	max-width: 100% !important;
+	width: 100% !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.dp-gb-section.dp-section--no-top-pad,
+.dp-section--no-top-pad {
+	padding-top: 0 !important;
+}
+
+/* Section background colors (full bleed) */
+.dp-gb-partners,
+.dp-gb-projects,
+.dp-gb-media {
+	background: #f5f5f5 !important;
+}
+
+.dp-gb-company,
+.dp-gb-leadership,
+.dp-gb-ops,
+.dp-gb-awards {
+	background: #ffffff !important;
+}
+
+.dp-gb-cta {
+	background: linear-gradient(160deg, #0f0f16, #1a1a2e) !important;
+}
+
+.dp-gb-section > h2.wp-block-heading,
+.dp-gb-section .wp-block-heading:where(h2) {
+	font-size: clamp(1.9rem, 3.8vw, 3rem) !important;
+	letter-spacing: -0.035em !important;
+	line-height: 1.08 !important;
+	margin: 0 0 0.9rem !important;
+	color: #1a1a2e !important;
+}
+
+.dp-gb-section > p,
+.dp-gb-section > .wp-block-paragraph {
+	max-width: 48rem;
+	color: #5c5c6d !important;
+	font-size: 1.05rem;
+	margin: 0 0 1.25rem !important;
+}
+
+/* Alternating section backgrounds via sibling groups full width wrapper */
+/* full-bleed backgrounds handled in main.css + section classes above */
+
+/* ---------- Logo strip ---------- */
+.dp-gb-logo-row {
+	align-items: center !important;
+	gap: 1rem !important;
+	margin: 1rem 0 0 !important;
+}
+
+.dp-gb-logo-row .wp-block-column {
+	flex-basis: 0 !important;
+	flex-grow: 1 !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 4.5rem;
+	background: #fff;
+	border: 1px solid rgba(26, 26, 46, 0.06);
+	border-radius: 0.85rem;
+	padding: 0.75rem !important;
+	box-shadow: 0 8px 24px rgba(12, 12, 18, 0.03);
+}
+
+.dp-gb-logo-row .wp-block-image,
+.dp-gb-logo-row .wp-block-image img {
+	margin: 0 auto !important;
+	max-height: 2.75rem !important;
+	width: auto !important;
+	object-fit: contain !important;
+	filter: grayscale(1);
+	opacity: 0.78;
+	transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.dp-gb-logo-row .wp-block-column:hover img {
+	filter: none;
+	opacity: 1;
+}
+
+/* ---------- Stat / card columns ---------- */
+.dp-gb-stats,
+.dp-gb-project-cards,
+.dp-gb-biz-stats,
+.dp-gb-team,
+.dp-gb-ops-grid,
+.dp-gb-media-grid,
+.dp-gb-awards-row,
+.dp-gb-lead-row {
+	gap: 1rem !important;
+	margin-top: 1.5rem !important;
+	align-items: stretch !important;
+}
+
+.dp-gb-stats .wp-block-column,
+.dp-gb-project-cards .wp-block-column,
+.dp-gb-biz-stats .wp-block-column {
+	background: #fff !important;
+	border: 1px solid rgba(26, 26, 46, 0.08) !important;
+	border-radius: 1.15rem !important;
+	padding: 1.35rem 1.4rem !important;
+	box-shadow: 0 14px 36px rgba(12, 12, 18, 0.05) !important;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dp-gb-stats .wp-block-column:hover,
+.dp-gb-project-cards .wp-block-column:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 20px 44px rgba(12, 12, 18, 0.09) !important;
+}
+
+.dp-gb-stats h3.wp-block-heading,
+.dp-gb-biz-stats h3.wp-block-heading {
+	font-size: clamp(2rem, 3.5vw, 2.75rem) !important;
+	letter-spacing: -0.04em !important;
+	margin: 0 0 0.35rem !important;
+	color: #1a1a2e !important;
+	font-weight: 700 !important;
+}
+
+.dp-gb-project-cards h3.wp-block-heading {
+	font-size: 1.25rem !important;
+	margin: 0.35rem 0 0.5rem !important;
+}
+
+.dp-gb-project-cards h4.wp-block-heading {
+	color: #ec2633 !important;
+	font-size: 0.85rem !important;
+	letter-spacing: 0.1em !important;
+	text-transform: uppercase !important;
+	margin: 0 !important;
+}
+
+/* ---------- Leadership split ---------- */
+.dp-gb-leadership {
+	background: #fff;
+}
+
+.dp-gb-lead-media .wp-block-image img {
+	width: 100%;
+	aspect-ratio: 4 / 5;
+	object-fit: cover;
+	object-position: top center;
+	border-radius: 1.25rem;
+	box-shadow: 0 24px 60px rgba(12, 12, 18, 0.12);
+}
+
+.dp-gb-leader-strip .wp-block-column,
+.dp-gb-team .wp-block-column {
+	background: #fff;
+	border: 1px solid rgba(26, 26, 46, 0.08);
+	border-radius: 1.1rem;
+	overflow: hidden;
+	padding: 0 !important;
+	box-shadow: 0 12px 32px rgba(12, 12, 18, 0.05);
+}
+
+.dp-gb-leader-strip .wp-block-image,
+.dp-gb-team .wp-block-image {
+	margin: 0 !important;
+}
+
+.dp-gb-leader-strip .wp-block-image img,
+.dp-gb-team .wp-block-image img,
+.dp-gb-person-img img {
+	width: 100% !important;
+	aspect-ratio: 1 / 1 !important;
+	object-fit: cover !important;
+	object-position: top center !important;
+	border-radius: 0 !important;
+	max-height: none !important;
+}
+
+.dp-gb-leader-strip h4.wp-block-heading,
+.dp-gb-team h3.wp-block-heading {
+	margin: 0.85rem 1rem 0.15rem !important;
+	font-size: 1.05rem !important;
+}
+
+.dp-gb-leader-strip p,
+.dp-gb-team p {
+	margin: 0 1rem 1rem !important;
+	color: #ec2633 !important;
+	font-size: 0.85rem !important;
+	font-weight: 650 !important;
+}
+
+/* ---------- Operations covers ---------- */
+.dp-gb-ops-grid .wp-block-column {
+	padding: 0 !important;
+}
+
+.dp-gb-ops-card.wp-block-cover {
+	min-height: 480px !important;
+	border-radius: 16px !important;
+	overflow: hidden;
+	justify-content: flex-end !important;
+}
+
+.dp-gb-ops-card .wp-block-cover__inner-container {
+	padding: 1.25rem !important;
+	width: 100%;
+}
+
+.dp-gb-ops-card h3.wp-block-heading {
+	color: #fff !important;
+	font-size: 1.45rem !important;
+	margin: 0 0 0.5rem !important;
+}
+
+.dp-gb-ops-card p {
+	color: rgba(255, 255, 255, 0.9) !important;
+	font-size: 0.95rem !important;
+}
+
+.dp-gb-ops-card .wp-block-button__link {
+	background: #fff !important;
+	color: #1a1a2e !important;
+	border-radius: 999px !important;
+	font-weight: 700 !important;
+}
+
+/* ---------- Media cards ---------- */
+.dp-gb-media-grid .wp-block-column {
+	background: #fff;
+	border-radius: 1.1rem;
+	overflow: hidden;
+	border: 1px solid rgba(26, 26, 46, 0.08);
+	padding: 0 !important;
+	box-shadow: 0 12px 32px rgba(12, 12, 18, 0.05);
+}
+
+.dp-gb-media-grid .wp-block-image {
+	margin: 0 !important;
+}
+
+.dp-gb-media-grid .wp-block-image img {
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	border-radius: 0 !important;
+	max-height: none !important;
+}
+
+.dp-gb-media-grid h3.wp-block-heading {
+	font-size: 1.1rem !important;
+	margin: 1rem 1.1rem 0.5rem !important;
+	line-height: 1.25 !important;
+}
+
+.dp-gb-media-grid .wp-block-buttons {
+	margin: 0 1.1rem 1.15rem !important;
+}
+
+/* ---------- Awards shorter ---------- */
+.dp-gb-awards-row .wp-block-column {
+	padding: 0 !important;
+}
+
+.dp-gb-awards-row .wp-block-image img,
+.dp-gb-award-img img {
+	width: 100% !important;
+	height: auto !important;
+	max-height: none !important;
+	aspect-ratio: auto !important;
+	object-fit: contain !important;
+	border-radius: 0.75rem !important;
+	box-shadow: 0 10px 28px rgba(12, 12, 18, 0.08);
+	background: #fff;
+}
+
+/* ---------- Business ---------- */
+.dp-gb-business,
+.dp-gb-business-cover {
+	border-radius: 0 !important;
+}
+
+.dp-gb-business-cover {
+	min-height: 520px !important;
+}
+
+.dp-gb-business-cover .wp-block-cover__inner-container {
+	max-width: 1400px !important;
+	margin: 0 auto;
+	padding: 3rem clamp(1.15rem, 4vw, 2.5rem) !important;
+}
+
+.dp-gb-business-cover h2.wp-block-heading {
+	color: #1a1a2e !important;
+	font-size: clamp(2rem, 4vw, 3rem) !important;
+}
+
+.dp-gb-business-cover p {
+	color: #1b181a !important;
+}
+
+.dp-gb-biz-brands {
+	background: transparent !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	font-size: 0.98rem !important;
+	line-height: 2 !important;
+	font-weight: 600 !important;
+	color: #1a1a2e !important;
+	max-width: none !important;
+}
+
+/* ---------- Inner pages: image density ---------- */
+.dp-gb-section .wp-block-image img {
+	border-radius: 1rem;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.dp-gb-section .wp-block-columns .wp-block-column {
+	min-width: 0;
+}
+
+.dp-gb-section .wp-block-list {
+	padding-left: 1.2rem;
+	color: #5c5c6d;
+}
+
+.dp-gb-section .wp-block-list li {
+	margin: 0.4rem 0;
+}
+
+/* Spec / chip style paragraphs */
+.dp-gb-section h3.wp-block-heading {
+	font-size: clamp(1.2rem, 2vw, 1.45rem) !important;
+	letter-spacing: -0.02em !important;
+	margin: 1.5rem 0 0.65rem !important;
+}
+
+.dp-gb-section h4.wp-block-heading {
+	font-size: 1.1rem !important;
+	margin: 0.35rem 0 !important;
+}
+
+/* FAQ */
+.dp-gb-faq {
+	max-width: 100% !important;
+	width: 100% !important;
+	margin: 0 !important;
+	padding: 2rem clamp(1.15rem, 4vw, 2.5rem) 3rem !important;
+}
+
+.dp-gb-faq-item {
+	background: #fff;
+	border: 1px solid rgba(26, 26, 46, 0.1);
+	border-radius: 1rem;
+	padding: 1.1rem 1.25rem !important;
+	margin: 0 0 0.75rem !important;
+	box-shadow: 0 8px 24px rgba(12, 12, 18, 0.03);
+}
+
+.dp-gb-faq-q {
+	color: #1a1a2e !important;
+	font-size: 1.05rem !important;
+	margin: 0 0 0.4rem !important;
+}
+
+.dp-gb-faq-a {
+	color: #5c5c6d !important;
+	margin: 0 !important;
+}
+
+/* CTA dark */
+.dp-gb-cta {
+	max-width: 100% !important;
+	width: 100% !important;
+	background: linear-gradient(160deg, #0f0f16, #1a1a2e) !important;
+	padding: clamp(3.5rem, 7vw, 5.5rem) clamp(1.15rem, 4vw, 2.5rem) !important;
+	margin: 0 !important;
+}
+
+.dp-gb-cta h2.wp-block-heading,
+.dp-gb-cta p {
+	color: #fff !important;
+}
+
+.dp-gb-cta .wp-block-button__link {
+	background: #ec2633 !important;
+	color: #fff !important;
+}
+
+/* Sustainability split */
+.dp-gb-sustain {
+	max-width: 100% !important;
+	width: 100% !important;
+	margin: 0 !important;
+	padding: clamp(3rem, 6vw, 5rem) clamp(1.15rem, 4vw, 2.5rem) !important;
+	gap: 1.5rem !important;
+	align-items: center !important;
+}
+
+.dp-gb-sustain-media img {
+	border-radius: 1.15rem;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+/* Wide company image */
+.dp-gb-wide-img img {
+	width: 100%;
+	max-height: 420px;
+	object-fit: cover;
+	border-radius: 1.15rem;
+	margin-top: 1.25rem;
+}
+
+/* Legal */
+.dp-gb-legal {
+	max-width: 800px !important;
+	padding-top: calc(var(--dp-header-h, 72px) + 2.5rem) !important;
+}
+
+/* Buttons global */
+.wp-block-post-content .wp-block-button__link {
+	border-radius: 999px !important;
+	font-weight: 700 !important;
+	padding: 0.85rem 1.3rem !important;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wp-block-post-content .wp-block-button__link:hover {
+	transform: translateY(-1px);
+}
+
+.wp-block-post-content .is-style-fill .wp-block-button__link,
+.wp-block-post-content .wp-block-button:not(.is-style-outline) .wp-block-button__link {
+	background: #ec2633 !important;
+	color: #fff !important;
+	box-shadow: 0 10px 24px rgba(236, 38, 51, 0.22);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+	.dp-gb-home-hero.wp-block-cover,
+	.dp-gb-page-hero.wp-block-cover {
+		min-height: 70vh !important;
+	}
+
+	.dp-gb-ops-card.wp-block-cover {
+		min-height: 360px !important;
+	}
+
+	.dp-gb-awards-row .wp-block-image img {
+		height: auto !important;
+		max-height: none !important;
+	}
+
+	.dp-gb-stats,
+	.dp-gb-project-cards,
+	.dp-gb-ops-grid,
+	.dp-gb-media-grid,
+	.dp-gb-awards-row,
+	.dp-gb-team,
+	.dp-gb-lead-row {
+		flex-wrap: wrap !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.dp-gb-home-hero .dp-gb-hero-title,
+	.dp-gb-home-hero h1.wp-block-heading {
+		font-size: clamp(2.2rem, 11vw, 3rem) !important;
+		max-width: none;
+	}
+
+	.dp-gb-ops-card.wp-block-cover {
+		min-height: 300px !important;
+	}
+
+	.dp-gb-logo-row .wp-block-column {
+		min-height: 3.5rem;
+	}
+}
+
+/* Prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.dp-gb-stats .wp-block-column,
+	.dp-gb-project-cards .wp-block-column,
+	.wp-block-post-content .wp-block-button__link {
+		transition: none !important;
+	}
+	[data-aos] {
+		opacity: 1 !important;
+		transform: none !important;
+		transition: none !important;
+	}
+}
+
+/* ==========================================================================
+   Live-style animations (AOS-compatible fade-up)
+   ========================================================================== */
+[data-aos] {
+	opacity: 0;
+	transition-property: opacity, transform;
+	transition-duration: 0.85s;
+	transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+	will-change: opacity, transform;
+}
+
+[data-aos="fade-up"] {
+	transform: translate3d(0, 40px, 0);
+}
+
+[data-aos="fade"] {
+	transform: none;
+}
+
+[data-aos="fade-right"] {
+	transform: translate3d(-36px, 0, 0);
+}
+
+[data-aos="fade-left"] {
+	transform: translate3d(36px, 0, 0);
+}
+
+[data-aos="zoom-in"] {
+	transform: scale(0.94);
+}
+
+[data-aos].aos-animate,
+[data-aos].is-in {
+	opacity: 1;
+	transform: none;
+}
+
+/* Stagger helpers */
+[data-aos-delay="50"] { transition-delay: 50ms; }
+[data-aos-delay="100"] { transition-delay: 100ms; }
+[data-aos-delay="150"] { transition-delay: 150ms; }
+[data-aos-delay="200"] { transition-delay: 200ms; }
+[data-aos-delay="250"] { transition-delay: 250ms; }
+[data-aos-delay="300"] { transition-delay: 300ms; }
+
+/* Hero entrance */
+.dp-gb-home-hero .dp-gb-hero-title,
+.dp-gb-home-hero .dp-gb-hero-lead,
+.dp-gb-home-hero .wp-block-buttons {
+	animation: dp-hero-rise 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.dp-gb-home-hero .dp-gb-hero-lead { animation-delay: 0.12s; }
+.dp-gb-home-hero .wp-block-buttons { animation-delay: 0.22s; }
+
+@keyframes dp-hero-rise {
+	from { opacity: 0; transform: translate3d(0, 28px, 0); }
+	to { opacity: 1; transform: none; }
+}
+
+/* Ops card hover (live integrate-cap style) */
+.dp-gb-ops-card.wp-block-cover {
+	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.dp-gb-ops-card.wp-block-cover:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 28px 60px rgba(12, 12, 18, 0.2);
+}
+.dp-gb-ops-card .wp-block-cover__image-background {
+	transition: transform 0.7s ease;
+}
+.dp-gb-ops-card:hover .wp-block-cover__image-background {
+	transform: scale(1.06);
+}

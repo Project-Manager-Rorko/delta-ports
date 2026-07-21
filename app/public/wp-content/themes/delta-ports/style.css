@@ -1,0 +1,39 @@
+﻿/*
+Theme Name: Delta Ports
+Theme URI: https://delta-ports.local
+Author: Delta Ports Rebuild
+Description: Block theme for Delta Ports â€” Gutenberg-editable pages, Geist typography, source-matched colors, performance-first.
+Version: 4.0.8
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 8.0
+Text Domain: delta-ports
+Tags: full-site-editing, block-patterns, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, wide-blocks
+*/
+
+/*
+ * ============================================================
+ * WHERE ARE THE STYLESHEETS?
+ * ============================================================
+ * This style.css only registers the theme with WordPress.
+ * Real CSS is loaded from /assets/css/ (see inc/enqueue.php):
+ *
+ *   assets/css/main.css        â†’ Header, base typography, global layout
+ *   assets/css/premium.css     â†’ Footer, premium polish
+ *   assets/css/live-parity.css â†’ Gutenberg section spacing/parity
+ *   assets/css/home-live.css   â†’ Homepage + About sections
+ *   assets/css/ops-live.css    â†’ Port-led / Cargo / Logistics / Leadership /
+ *                                 Sustainability / Contact banners & sections
+ *   assets/css/awwwards.css    â†’ Extra page-system styles
+ *
+ * Edit files in:
+ *   C:\Users\shanm\Local Sites\delta-ports\app\public\wp-content\themes\delta-ports\assets\css\
+ *
+ * After edits: hard-refresh browser (Ctrl+F5).
+ * To bust cache: bump DELTA_PORTS_VERSION in functions.php
+ *
+ * NOTE: Live vipaccounts.org uses Hello Elementor + Elementor page builder.
+ * This local site uses the custom "delta-ports" theme (active). Hello Elementor
+ * is NOT installed here. Switching themes would break the current design.
+ * ============================================================
+ */

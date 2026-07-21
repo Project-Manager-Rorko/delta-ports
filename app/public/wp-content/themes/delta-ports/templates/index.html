@@ -1,0 +1,47 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"dp-media-page","layout":{"type":"default"}} -->
+<main class="wp-block-group dp-media-page">
+
+	<!-- wp:html -->
+	<section class="dp-media-hero">
+		<div class="dp-media-hero__inner">
+			<nav class="dp-ops-hero__crumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span>Media &amp; Updates</span></nav>
+			<h1>Media &amp; Updates</h1>
+			<p class="dp-media-hero__lead">Latest stories and operational updates from Delta Ports.</p>
+		</div>
+	</section>
+	<!-- /wp:html -->
+
+	<!-- wp:group {"className":"dp-media-shell","layout":{"type":"constrained","contentSize":"1400px"}} -->
+	<div class="wp-block-group dp-media-shell">
+		<!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"className":"dp-media-query"} -->
+		<div class="wp-block-query dp-media-query">
+			<!-- wp:post-template {"layout":{"type":"grid","columnCount":3},"className":"dp-media-grid"} -->
+				<!-- wp:group {"className":"dp-media-card","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group dp-media-card">
+					<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/10","className":"dp-media-card__media"} /-->
+					<!-- wp:group {"className":"dp-media-card__body","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group dp-media-card__body">
+						<!-- wp:post-date {"format":"M j, Y"} /-->
+						<!-- wp:post-title {"isLink":true,"level":3} /-->
+						<!-- wp:post-excerpt {"moreText":"Read article","excerptLength":20} /-->
+					</div>
+					<!-- /wp:group -->
+				</div>
+				<!-- /wp:group -->
+			<!-- /wp:post-template -->
+			<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"className":"dp-media-pagination"} -->
+				<!-- wp:query-pagination-previous /-->
+				<!-- wp:query-pagination-numbers /-->
+				<!-- wp:query-pagination-next /-->
+			<!-- /wp:query-pagination -->
+		</div>
+		<!-- /wp:query -->
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->

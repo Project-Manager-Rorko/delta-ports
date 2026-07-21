@@ -1,0 +1,20 @@
+﻿# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.swp
+
+# Local / temp
+_tools/
+*.tmp
+.cache/
+
+# PHP deps if any
+/vendor/
+composer.lock
+
+# Node if any
+node_modules/
+npm-debug.log*

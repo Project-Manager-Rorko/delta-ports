@@ -1,0 +1,89 @@
+/**
+ * Contact.
+ */
+function delta_ports_content_contact() {
+	$hero = delta_ports_aw_inner_hero(
+		'Contact Us',
+		'Contact Us',
+		'Reach Delta Ports in Mangalore, Bangalore, and Dammam for port operations, logistics services, and business enquiries.',
+		'des-banner-Port-leadership.webp'
+	);
+
+	$map_hq  = 'https://www.openstreetmap.org/export/embed.html?bbox=74.84%2C12.88%2C74.90%2C12.93&layer=mapnik&marker=12.905%2C74.870';
+	$map_blr = 'https://www.openstreetmap.org/export/embed.html?bbox=77.60%2C12.96%2C77.63%2C12.98&layer=mapnik&marker=12.9716%2C77.6197';
+	$map_sa  = 'https://www.openstreetmap.org/export/embed.html?bbox=50.07%2C26.38%2C50.15%2C26.45&layer=mapnik&marker=26.4207%2C50.0888';
+
+	$form_id = function_exists( 'delta_ports_get_or_create_talent_form' ) ? (int) delta_ports_get_or_create_talent_form() : 0;
+	if ( ! $form_id ) {
+		$forms = get_posts(
+			array(
+				'post_type'      => 'wpcf7_contact_form',
+				'posts_per_page' => 1,
+				'post_status'    => 'publish',
+				'fields'         => 'ids',
+			)
+		);
+		$form_id = $forms ? (int) $forms[0] : 0;
+	}
+	$form_shortcode = $form_id
+		? '[contact-form-7 id="' . $form_id . '" title="Talent Network"]'
+		: '[contact-form-7 title="Contact form 1"]';
+
+	return <<<HTML
+<!-- wp:html -->
+<div class="aw-page aw-contact" data-aw-page="contact">
+{$hero}
+<section class="aw-section">
+	<div class="aw-office-grid aw-office-grid--maps">
+		<article class="aw-card aw-office-card" data-aw-reveal>
+			<div class="aw-map"><iframe title="Head Quarters map" src="{$map_hq}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+			<div class="aw-office-card__body">
+				<h3>Head Quarters</h3>
+				<p>Delta House, 6th Floor, Bangra Kulur Road, Kulur, Mangalore - 575013, Karnataka, India.</p>
+				<p class="aw-office-meta"><strong>Office hours</strong><br>9am - 5.30pm Monday - Friday<br>9am - 2pm Saturday</p>
+				<p class="aw-office-meta"><a href="tel:+919902395555">99023 95555</a></p>
+				<p class="aw-office-meta"><a href="https://www.google.com/maps/search/?api=1&amp;query=Delta+House+Bangra+Kulur+Road+Mangalore" target="_blank" rel="noopener">Open in Google Maps</a></p>
+			</div>
+		</article>
+		<article class="aw-card aw-office-card" data-aw-reveal>
+			<div class="aw-map"><iframe title="Bangalore Office map" src="{$map_blr}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+			<div class="aw-office-card__body">
+				<h3>Bangalore Office</h3>
+				<p>Tower-B, Unit No. 407, No.84, Mahatma Gandhi Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001</p>
+				<p class="aw-office-meta"><strong>Office hours</strong><br>10am - 6pm Monday - Friday<br>10am - 4pm Saturday</p>
+				<p class="aw-office-meta"><a href="tel:+919480849765">+91 94808 49765</a></p>
+				<p class="aw-office-meta"><a href="https://www.google.com/maps/search/?api=1&amp;query=Mahatma+Gandhi+Rd+Ashok+Nagar+Bengaluru+560001" target="_blank" rel="noopener">Open in Google Maps</a></p>
+			</div>
+		</article>
+		<article class="aw-card aw-office-card" data-aw-reveal>
+			<div class="aw-map"><iframe title="Saudi Arabia Office map" src="{$map_sa}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+			<div class="aw-office-card__body">
+				<h3>Saudi Arabia Office</h3>
+				<p>King Faisal Ibn Abd Al Aziz, Al Khalidiyyah Al Janubiyyah, Dammam 32221, Saudi Arabia</p>
+				<p class="aw-office-meta"><strong>Office hours</strong><br>8am - 5pm Sunday - Thursday</p>
+				<p class="aw-office-meta"><a href="tel:+966561416184">+966 561 416 184</a></p>
+				<p class="aw-office-meta"><a href="https://www.google.com/maps/search/?api=1&amp;query=King+Faisal+Ibn+Abd+Al+Aziz+Dammam+32221" target="_blank" rel="noopener">Open in Google Maps</a></p>
+			</div>
+		</article>
+	</div>
+</section>
+<section class="aw-section aw-section--soft"><div class="aw-section__inner" data-aw-reveal>
+	<p class="aw-kicker">Careers</p>
+	<h2 style="font-size:clamp(1.9rem,3.5vw,2.8rem);letter-spacing:-.03em;margin:0 0 .75rem">Join Our Talent Network</h2>
+	<p class="aw-sub">We are always interested in engaging with professionals who share our values and wish to grow with an infrastructure-led organisation.</p>
+	<p style="margin:1rem 0"><a href="mailto:info@deltaports.com" style="color:#ec2633;font-weight:700;text-decoration:none">info@deltaports.com</a></p>
+	<p class="aw-sub">Fields: Full Name · Email · Mobile · Business Vertical · Years of Experience · Resume</p>
+</div></section>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:group {"className":"aw-cf7-section","layout":{"type":"constrained","contentSize":"840px"}} -->
+<div class="wp-block-group aw-cf7-section">
+	<!-- wp:shortcode -->
+	{$form_shortcode}
+	<!-- /wp:shortcode -->
+</div>
+<!-- /wp:group -->
+HTML;
+}
+

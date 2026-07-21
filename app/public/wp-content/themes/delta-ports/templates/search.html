@@ -1,0 +1,78 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"dp-search-page","layout":{"type":"default"}} -->
+<main class="wp-block-group dp-search-page">
+
+	<!-- wp:html -->
+	<section class="dp-media-hero dp-media-hero--search">
+		<div class="dp-media-hero__inner">
+			<nav class="dp-ops-hero__crumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span>Search</span></nav>
+			<h1>Search results</h1>
+			<p class="dp-media-hero__lead">Find Media &amp; Updates, insights, and pages across Delta Ports.</p>
+		</div>
+	</section>
+	<!-- /wp:html -->
+
+	<!-- wp:group {"className":"dp-search-shell","layout":{"type":"constrained","contentSize":"1400px"}} -->
+	<div class="wp-block-group dp-search-shell">
+
+		<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search again…","buttonText":"Search","buttonPosition":"button-inside","className":"dp-search-form"} /-->
+
+		<!-- wp:query-title {"type":"search","level":2,"className":"dp-search-title"} /-->
+
+		<!-- wp:query {"queryId":42,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"className":"dp-media-query"} -->
+		<div class="wp-block-query dp-media-query">
+			<!-- wp:post-template {"layout":{"type":"grid","columnCount":3},"className":"dp-media-grid"} -->
+				<!-- wp:group {"className":"dp-media-card","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group dp-media-card">
+					<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/10","className":"dp-media-card__media"} /-->
+					<!-- wp:group {"className":"dp-media-card__body","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group dp-media-card__body">
+						<!-- wp:group {"className":"dp-media-card__meta","layout":{"type":"flex","flexWrap":"wrap"}} -->
+						<div class="wp-block-group dp-media-card__meta">
+							<!-- wp:post-date {"format":"M j, Y"} /-->
+						</div>
+						<!-- /wp:group -->
+						<!-- wp:post-title {"isLink":true,"level":3} /-->
+						<!-- wp:post-excerpt {"moreText":"Read article","excerptLength":22} /-->
+					</div>
+					<!-- /wp:group -->
+				</div>
+				<!-- /wp:group -->
+			<!-- /wp:post-template -->
+
+			<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"className":"dp-media-pagination"} -->
+				<!-- wp:query-pagination-previous /-->
+				<!-- wp:query-pagination-numbers /-->
+				<!-- wp:query-pagination-next /-->
+			<!-- /wp:query-pagination -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:group {"className":"dp-search-empty","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group dp-search-empty">
+					<!-- wp:heading {"level":3} -->
+					<h3 class="wp-block-heading">No results found</h3>
+					<!-- /wp:heading -->
+					<!-- wp:paragraph -->
+					<p>Try different keywords, or browse Media &amp; Updates and key pages below.</p>
+					<!-- /wp:paragraph -->
+					<!-- wp:html -->
+					<div class="dp-error-actions">
+						<a class="dp-error-btn dp-error-btn--fill" href="/media-updates/">Media &amp; Updates</a>
+						<a class="dp-error-btn" href="/">Home</a>
+						<a class="dp-error-btn" href="/contact-us/">Contact Us</a>
+					</div>
+					<!-- /wp:html -->
+				</div>
+				<!-- /wp:group -->
+			<!-- /wp:query-no-results -->
+		</div>
+		<!-- /wp:query -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->

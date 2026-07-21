@@ -1,0 +1,744 @@
+/**
+ * WWA page — Delta Ports global design system + reference content.
+ * Scoped under .wwa-page only. Content width: 1400px.
+ */
+
+/* -------------------------------------------------------------------------- */
+/* Tokens (Delta + reference)                                                 */
+/* -------------------------------------------------------------------------- */
+
+.wwa-page {
+	/* Reference trust teal: rgb(90, 181, 172) */
+	--wwa-content: var(--dp-content-max, 1400px);
+	--wwa-navy: #1a1a2e;
+	--wwa-ink: #1a1a2e;
+	--wwa-muted: #6b7280;
+	--wwa-red: #ec2633;
+	--wwa-red-hover: #d41f2b;
+	--wwa-stat: #5ab5ac;
+	--wwa-stat-b: #4faca3;
+	--wwa-stat-c: #6ec4bb;
+	--wwa-pink: #f8e9e8;
+	--wwa-white: #ffffff;
+	--wwa-radius: 18px;
+	--wwa-radius-lg: 22px;
+	--wwa-shadow: 0 16px 40px rgba(26, 26, 46, 0.1);
+	--wwa-gutter: clamp(1.15rem, 4vw, 2.5rem);
+	color: var(--wwa-ink);
+	background: var(--wwa-white);
+	overflow-x: clip;
+	width: 100%;
+	font-family: "geist", system-ui, -apple-system, sans-serif;
+}
+
+.wwa-page .wwa-wrap {
+	width: 100%;
+	max-width: var(--wwa-content);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--wwa-gutter);
+	padding-right: var(--wwa-gutter);
+	box-sizing: border-box;
+}
+
+.wwa-page .wwa-sec {
+	padding: clamp(3.5rem, 6.5vw, 5.5rem) 0;
+}
+
+.wwa-page .wwa-btn,
+.wwa-page .dp-home-hero__btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.85rem 1.75rem;
+	border-radius: 999px;
+	background: var(--wwa-red);
+	color: #fff !important;
+	font-weight: 600;
+	font-size: 0.95rem;
+	text-decoration: none !important;
+	box-shadow: 0 10px 28px rgba(236, 38, 51, 0.28);
+	transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+	border: none;
+	white-space: nowrap;
+}
+
+.wwa-page .wwa-btn:hover,
+.wwa-page .dp-home-hero__btn:hover {
+	background: var(--wwa-red-hover);
+	transform: translateY(-2px);
+	box-shadow: 0 14px 32px rgba(236, 38, 51, 0.36);
+}
+
+/* -------------------------------------------------------------------------- */
+/* HERO — Delta home banner structure + reference content                     */
+/* -------------------------------------------------------------------------- */
+
+.wwa-page .wwa-hero.dp-home-hero {
+	/* inherits home-live.css: 100vh, flex end, pull under header via main.css */
+	display: flex;
+	align-items: flex-end;
+}
+
+.wwa-page .wwa-hero .dp-home-hero__media,
+.wwa-page .wwa-hero .wwa-hero__video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+}
+
+.wwa-page .wwa-hero .dp-home-hero__overlay,
+.wwa-page .wwa-hero .wwa-hero__overlay {
+	z-index: 1;
+	background: linear-gradient(
+		180deg,
+		rgba(15, 15, 22, 0.3) 0%,
+		rgba(15, 15, 22, 0.45) 42%,
+		rgba(15, 15, 22, 0.88) 100%
+	);
+}
+
+/* Override home 2-col for reference layout (badge+title | lead+cta) */
+.wwa-page .wwa-hero .dp-home-hero__inner.wwa-hero__inner {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	max-width: var(--wwa-content);
+	margin: 0 auto;
+	padding: calc(var(--dp-header-h, 72px) + clamp(2.5rem, 5vw, 4rem)) var(--wwa-gutter) clamp(2.5rem, 5vw, 3.5rem);
+	display: grid;
+	grid-template-columns: 1.2fr 0.9fr;
+	gap: 2rem 3rem;
+	align-items: end;
+	box-sizing: border-box;
+}
+
+.wwa-page .wwa-hero__badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 0.45rem 0.95rem;
+	border-radius: 999px;
+	background: rgba(90, 181, 172, 0.95);
+	color: #fff;
+	font-size: 0.82rem;
+	font-weight: 600;
+	margin-bottom: 1.1rem;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.wwa-page .wwa-hero__badge i {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #fff;
+	display: inline-block;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.wwa-page .wwa-hero__title {
+	margin: 0;
+	max-width: 15ch;
+	font-size: clamp(2.4rem, 5.2vw, 4.15rem);
+	line-height: 1.05;
+	letter-spacing: -0.035em;
+	font-weight: 600;
+	color: #fff;
+}
+
+.wwa-page .wwa-hero__side {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.25rem;
+	padding-bottom: 0.25rem;
+}
+
+.wwa-page .wwa-hero__lead {
+	margin: 0;
+	max-width: 30rem;
+	font-size: clamp(1rem, 1.35vw, 1.12rem);
+	line-height: 1.65;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+/* -------------------------------------------------------------------------- */
+/* BUILT ON TRUST                                                             */
+/* -------------------------------------------------------------------------- */
+
+.wwa-page .wwa-trust {
+	background: #fff;
+}
+
+.wwa-page .wwa-trust__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+	gap: clamp(2rem, 4vw, 3.5rem);
+	align-items: center;
+}
+
+.wwa-page .wwa-trust__copy h2 {
+	margin: 0 0 1rem;
+	font-size: clamp(2rem, 3.5vw, 2.75rem);
+	line-height: 1.1;
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	color: var(--wwa-ink);
+}
+
+.wwa-page .wwa-trust__copy > p {
+	margin: 0 0 1.75rem;
+	font-size: 1.02rem;
+	line-height: 1.7;
+	color: var(--wwa-muted);
+	max-width: 36rem;
+}
+
+.wwa-page .wwa-trust__stats {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.85rem;
+	max-width: 28rem;
+}
+
+/* Exact reference teal family: #5AB5AC */
+.wwa-page .wwa-stat {
+	border-radius: 14px;
+	padding: 1.15rem 1.2rem;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	min-height: 100px;
+	justify-content: center;
+	box-shadow: 0 8px 24px rgba(90, 181, 172, 0.22);
+}
+
+.wwa-page .wwa-stat strong {
+	font-size: 1.9rem;
+	line-height: 1;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: #fff;
+}
+
+.wwa-page .wwa-stat span {
+	font-size: 0.88rem;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.wwa-page .wwa-stat--a {
+	background: #5ab5ac; /* 500+ Machines — reference rgb(90,181,172) */
+}
+
+.wwa-page .wwa-stat--b {
+	background: #4faca3; /* 300+ slightly deeper teal (same family as design) */
+}
+
+.wwa-page .wwa-stat--c {
+	grid-column: 1 / -1;
+	background: #6ec4bb; /* 90+ lighter mint teal */
+	min-height: 92px;
+}
+
+.wwa-page .wwa-trust__media {
+	position: relative;
+	min-width: 0;
+}
+
+.wwa-page .wwa-trust__photo {
+	width: 100%;
+	height: clamp(320px, 36vw, 460px);
+	object-fit: cover;
+	border-radius: var(--wwa-radius-lg);
+	display: block;
+	box-shadow: var(--wwa-shadow);
+}
+
+.wwa-page .wwa-dealer-card {
+	position: absolute;
+	left: -1.25rem;
+	bottom: 1.75rem;
+	width: min(280px, 72%);
+	background: #fff;
+	border-radius: 16px;
+	padding: 1.15rem 1.25rem 1.2rem;
+	box-shadow: 0 18px 48px rgba(26, 26, 46, 0.16);
+	border: 1px solid rgba(26, 26, 46, 0.06);
+}
+
+.wwa-page .wwa-dealer-card__brand {
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
+	margin-bottom: 0.75rem;
+}
+
+.wwa-page .wwa-dealer-card__hd {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 8px;
+	background: #0b3d91;
+	color: #fff;
+	font-weight: 800;
+	font-size: 0.95rem;
+}
+
+.wwa-page .wwa-dealer-card__lines {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.15;
+}
+
+.wwa-page .wwa-dealer-card__lines strong {
+	font-size: 0.62rem;
+	letter-spacing: 0.04em;
+	color: #0b3d91;
+	font-weight: 700;
+}
+
+.wwa-page .wwa-dealer-card__lines em {
+	font-style: normal;
+	font-size: 0.62rem;
+	letter-spacing: 0.08em;
+	color: #334155;
+	font-weight: 600;
+	border-left: 1px solid #cbd5e1;
+	padding-left: 0.45rem;
+	margin-top: 0.15rem;
+}
+
+.wwa-page .wwa-dealer-card__tag {
+	margin: 0 0 0.25rem;
+	font-size: 0.68rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	color: var(--wwa-red);
+	text-transform: uppercase;
+}
+
+.wwa-page .wwa-dealer-card__name {
+	margin: 0;
+	font-size: 1.05rem;
+	font-weight: 700;
+	line-height: 1.25;
+	color: var(--wwa-ink);
+}
+
+/* -------------------------------------------------------------------------- */
+/* OUR PRODUCT — equal tiles + hover arrow                                    */
+/* -------------------------------------------------------------------------- */
+
+.wwa-page .wwa-products {
+	padding-top: 0;
+	background: #fff;
+}
+
+.wwa-page .wwa-products__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.15rem;
+	align-items: stretch;
+}
+
+.wwa-page .wwa-products__intro {
+	background: var(--wwa-pink);
+	border-radius: var(--wwa-radius-lg);
+	padding: clamp(1.5rem, 3vw, 2.25rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* Match product card height */
+	aspect-ratio: 4 / 3;
+	min-height: 0;
+	box-sizing: border-box;
+}
+
+.wwa-page .wwa-products__intro h2 {
+	margin: 0 0 0.85rem;
+	font-size: clamp(1.75rem, 2.8vw, 2.25rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: var(--wwa-ink);
+}
+
+.wwa-page .wwa-products__intro p {
+	margin: 0;
+	font-size: 0.98rem;
+	line-height: 1.65;
+	color: #5b6472;
+	max-width: 28ch;
+}
+
+.wwa-page .wwa-prod-card {
+	position: relative;
+	display: block;
+	margin: 0;
+	border-radius: var(--wwa-radius-lg);
+	overflow: hidden;
+	/* Equal size to intro + all product tiles */
+	aspect-ratio: 4 / 3;
+	width: 100%;
+	height: auto;
+	background: #0f1220;
+	text-decoration: none !important;
+	box-shadow: 0 10px 30px rgba(26, 26, 46, 0.08);
+	isolation: isolate;
+}
+
+.wwa-page .wwa-prod-card img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+	transition: transform 0.45s ease;
+}
+
+/* Soft bottom gradient so baked labels stay readable if present */
+.wwa-page .wwa-prod-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(180deg, transparent 50%, rgba(10, 12, 20, 0.55) 100%);
+	pointer-events: none;
+	opacity: 0.35;
+	transition: opacity 0.25s ease;
+}
+
+.wwa-page .wwa-prod-card:hover img {
+	transform: scale(1.05);
+}
+
+.wwa-page .wwa-prod-card:hover::before {
+	opacity: 0.55;
+}
+
+/* Right-side arrow — hidden until hover */
+.wwa-page .wwa-prod-card__arrow {
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
+	z-index: 3;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.95);
+	color: var(--wwa-ink);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transform: translateX(8px);
+	transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+	pointer-events: none;
+}
+
+.wwa-page .wwa-prod-card:hover .wwa-prod-card__arrow,
+.wwa-page .wwa-prod-card:focus-visible .wwa-prod-card__arrow {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.wwa-page .wwa-prod-card:hover .wwa-prod-card__arrow {
+	background: var(--wwa-red);
+	color: #fff;
+}
+
+/* -------------------------------------------------------------------------- */
+/* SALES, SERVICE & SUPPORT — reference layout                                */
+/* -------------------------------------------------------------------------- */
+
+.wwa-page .wwa-support {
+	background: var(--wwa-navy);
+	color: #fff;
+	padding: clamp(4rem, 7vw, 5.75rem) 0;
+}
+
+.wwa-page .wwa-support__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+	gap: clamp(2.25rem, 5vw, 4rem);
+	align-items: center;
+}
+
+.wwa-page .wwa-support__copy h2 {
+	margin: 0 0 1.1rem;
+	font-size: clamp(1.9rem, 3.2vw, 2.55rem);
+	line-height: 1.12;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: #fff;
+}
+
+.wwa-page .wwa-support__lead {
+	margin: 0 0 1.5rem;
+	font-size: 1.02rem;
+	line-height: 1.7;
+	color: rgba(255, 255, 255, 0.82);
+	max-width: 34rem;
+}
+
+.wwa-page .wwa-support__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.85rem;
+}
+
+.wwa-page .wwa-support__list li {
+	position: relative;
+	padding-left: 1.4rem;
+	font-size: 0.98rem;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.92);
+}
+
+.wwa-page .wwa-support__list li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.48em;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #f5c542;
+	box-shadow: 0 0 0 3px rgba(245, 197, 66, 0.18);
+}
+
+.wwa-page .wwa-support__right {
+	display: flex;
+	flex-direction: column;
+	gap: 1.15rem;
+	min-width: 0;
+}
+
+.wwa-page .wwa-support__aside {
+	margin: 0;
+	font-size: 0.98rem;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.78);
+	max-width: 26rem;
+	margin-left: auto;
+	text-align: right;
+}
+
+.wwa-page .wwa-support__photos {
+	display: grid;
+	grid-template-columns: 1.25fr 0.85fr;
+	gap: 0.9rem;
+	align-items: end;
+}
+
+.wwa-page .wwa-support__fig {
+	margin: 0;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+	background: #12121f;
+}
+
+.wwa-page .wwa-support__fig img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.wwa-page .wwa-support__fig--main {
+	aspect-ratio: 4 / 3.2;
+}
+
+.wwa-page .wwa-support__fig--side {
+	aspect-ratio: 3 / 3.4;
+	margin-bottom: 0.35rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* GLOBAL PRESENCE                                                            */
+/* -------------------------------------------------------------------------- */
+
+.wwa-page .wwa-global {
+	background: #fff;
+	text-align: center;
+	padding-bottom: clamp(4.5rem, 8vw, 6.5rem);
+}
+
+.wwa-page .wwa-global__head {
+	max-width: 44rem;
+	margin: 0 auto 2.5rem;
+}
+
+.wwa-page .wwa-global__head h2 {
+	margin: 0 0 0.85rem;
+	font-size: clamp(1.9rem, 3.2vw, 2.55rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: var(--wwa-ink);
+}
+
+.wwa-page .wwa-global__head p {
+	margin: 0;
+	font-size: 1.02rem;
+	line-height: 1.7;
+	color: var(--wwa-muted);
+}
+
+.wwa-page .wwa-global__stats {
+	display: grid;
+	grid-template-columns: 1fr minmax(220px, 1.4fr) 1fr;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 2.25rem;
+}
+
+.wwa-page .wwa-global__stat strong {
+	display: block;
+	font-size: clamp(2.4rem, 4vw, 3.25rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	color: var(--wwa-ink);
+	margin-bottom: 0.4rem;
+}
+
+.wwa-page .wwa-global__stat span {
+	display: block;
+	font-size: 0.95rem;
+	color: var(--wwa-muted);
+	font-weight: 500;
+}
+
+.wwa-page .wwa-global__map {
+	position: relative;
+	min-height: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wwa-page .wwa-global__delta {
+	font-size: clamp(3.5rem, 9vw, 6.5rem);
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	line-height: 1;
+	color: transparent;
+	background-image: radial-gradient(circle, rgba(236, 38, 51, 0.45) 1.1px, transparent 1.25px);
+	background-size: 7px 7px;
+	-webkit-background-clip: text;
+	background-clip: text;
+	user-select: none;
+	opacity: 0.85;
+}
+
+.wwa-page .wwa-global__partners {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.65rem 0.75rem;
+	max-width: 56rem;
+	margin: 0 auto;
+}
+
+.wwa-page .wwa-pill {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.55rem 1rem;
+	border-radius: 999px;
+	background: #f3f4f6;
+	border: 1px solid #e5e7eb;
+	color: #4b5563;
+	font-size: 0.88rem;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsive                                                                 */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+	.wwa-page .wwa-hero .dp-home-hero__inner.wwa-hero__inner {
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.wwa-page .wwa-trust__grid,
+	.wwa-page .wwa-support__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wwa-page .wwa-dealer-card {
+		left: 1rem;
+		bottom: 1rem;
+	}
+
+	.wwa-page .wwa-support__aside {
+		text-align: left;
+		margin-left: 0;
+	}
+
+	.wwa-page .wwa-global__stats {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 900px) {
+	.wwa-page .wwa-products__grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.wwa-page .wwa-products__intro {
+		grid-column: 1 / -1;
+		aspect-ratio: auto;
+		min-height: 180px;
+	}
+}
+
+@media (max-width: 781px) {
+	.wwa-page .wwa-support__photos {
+		grid-template-columns: 1fr;
+	}
+
+	.wwa-page .wwa-support__fig--main,
+	.wwa-page .wwa-support__fig--side {
+		aspect-ratio: 16 / 10;
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 560px) {
+	.wwa-page .wwa-products__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.wwa-page .wwa-trust__stats {
+		max-width: none;
+	}
+
+	/* Always show a subtle arrow on touch devices */
+	.wwa-page .wwa-prod-card__arrow {
+		opacity: 0.85;
+		transform: none;
+	}
+}
+
+body.page-slug-wwa,
+body.page-wwa {
+	overflow-x: clip;
+}
