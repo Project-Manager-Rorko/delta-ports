@@ -49,6 +49,14 @@
 		if (!canvas) return;
 
 		var src = canvas.getAttribute('data-src') || (host && host.getAttribute('data-src')) || '';
+		try {
+			var mapUrl = new URL(src, window.location.href);
+			if (mapUrl.pathname.indexOf('/wp-content/themes/delta-ports/') !== -1) {
+				src = mapUrl.pathname + mapUrl.search + mapUrl.hash;
+			}
+		} catch (error) {
+			// The existing image error handler supplies the static fallback.
+		}
 		var fallback = canvas.parentElement || host;
 
 		// Static fallback if reduced motion or no WebGL.

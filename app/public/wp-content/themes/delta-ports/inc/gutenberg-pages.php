@@ -133,15 +133,15 @@ function delta_ports_content_home() {
 	$company_left .= '<!-- wp:html -->
 <div class="dp-home-onestop__stats">
 	<div class="dp-home-onestop__stat">
-		<strong class="dp-home-onestop__num" data-count-to="25" data-suffix="+">0+</strong>
+		<strong class="dp-home-onestop__num" data-count-to="25" data-suffix="+">25+</strong>
 		<span>Years of Legacy</span>
 	</div>
 	<div class="dp-home-onestop__stat">
-		<strong class="dp-home-onestop__num" data-count-to="500" data-suffix="+">0+</strong>
+		<strong class="dp-home-onestop__num" data-count-to="500" data-suffix="+">500+</strong>
 		<span>Professionals</span>
 	</div>
 	<div class="dp-home-onestop__stat">
-		<strong class="dp-home-onestop__num" data-count-to="50" data-suffix="+">0+</strong>
+		<strong class="dp-home-onestop__num" data-count-to="50" data-suffix="+">50+</strong>
 		<span>Warehouses</span>
 	</div>
 </div>
@@ -323,7 +323,7 @@ function delta_ports_content_home() {
 		</div>
 		<div class="dp-home-business__stats">
 			<div class="dp-home-business__stat">
-				<strong class="dp-home-business__num" data-count-to="2" data-suffix="+">0+</strong>
+				<strong class="dp-home-business__num" data-count-to="2" data-suffix="+">2+</strong>
 				<span class="dp-home-business__label">Berths</span>
 				<div class="dp-home-business__sub-pills">
 					<span>Delta Marmagoa Port</span>
@@ -331,7 +331,7 @@ function delta_ports_content_home() {
 				</div>
 			</div>
 			<div class="dp-home-business__stat dp-home-business__stat--right">
-				<strong class="dp-home-business__num" data-count-to="25" data-suffix="M+">0M+</strong>
+				<strong class="dp-home-business__num" data-count-to="25" data-suffix="M+">25M+</strong>
 				<span class="dp-home-business__label">MT Cargo Handled Annually</span>
 			</div>
 		</div>

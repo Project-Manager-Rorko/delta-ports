@@ -34,6 +34,10 @@
 	pointer-events: none;
 }
 
+.dp-about-hero__overlay {
+	background: linear-gradient(to top, rgba(26, 26, 46, 0.94) 0%, rgba(26, 26, 46, 0.68) 30%, rgba(26, 26, 46, 0.18) 58%, transparent 100%);
+}
+
 .dp-gb-page-hero::before,
 .aw-inner-hero::before {
 	content: "";

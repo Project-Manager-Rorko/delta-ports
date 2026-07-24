@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DELTA_PORTS_VERSION', '4.5.1' );
+define( 'DELTA_PORTS_VERSION', '4.5.26' );
 define( 'DELTA_PORTS_DIR', get_template_directory() );
 define( 'DELTA_PORTS_URI', get_template_directory_uri() );
 

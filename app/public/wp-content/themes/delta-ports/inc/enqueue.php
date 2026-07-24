@@ -88,6 +88,13 @@ function delta_ports_enqueue_assets() {
 		);
 	}
 
+	wp_enqueue_style(
+		'delta-ports-wide-screen',
+		DELTA_PORTS_URI . '/assets/css/wide-screen.css',
+		array( 'delta-ports-live-parity' ),
+		$ver
+	);
+
 	// Core interactions (defer).
 	wp_enqueue_script(
 		'delta-ports-main',
@@ -104,18 +111,6 @@ function delta_ports_enqueue_assets() {
 	wp_enqueue_script(
 		'delta-ports-live-animations',
 		DELTA_PORTS_URI . '/assets/js/live-animations.js',
-		array( 'delta-ports-main' ),
-		$ver,
-		array(
-			'in_footer' => true,
-			'strategy'  => 'defer',
-		)
-	);
-
-	// GSAP motion: deferred local boot that lazy-loads CDN after idle (keeps LCP clean).
-	wp_enqueue_script(
-		'delta-ports-gsap-motion',
-		DELTA_PORTS_URI . '/assets/js/gsap-motion.js',
 		array( 'delta-ports-main' ),
 		$ver,
 		array(

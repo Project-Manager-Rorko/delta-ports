@@ -3,10 +3,18 @@
 	<div class="dp-site-header__bar">
 		<div class="dp-site-header__inner">
 			<a class="dp-logo" href="/" aria-label="Delta Ports Home">
-				<img class="dp-logo__img" src="/wp-content/themes/delta-ports/assets/images/delta-port-update-header.svg" alt="Delta Ports" width="160" height="40" decoding="async" />
+				<img class="dp-logo__img" src="/wp-content/themes/delta-ports/assets/images/delta-port-update-header.svg" alt="Delta Ports" width="122" height="78" decoding="async" />
 			</a>
 
 			<nav class="dp-nav" id="dp-primary-nav" aria-label="Primary">
+				<div class="dp-mobile-nav__top">
+					<a class="dp-mobile-nav__logo" href="/" aria-label="Delta Ports Home">
+						<img src="/wp-content/themes/delta-ports/assets/images/delta-port-update-header.svg" alt="Delta Ports" width="122" height="78" decoding="async" />
+					</a>
+					<button type="button" class="dp-mobile-nav__close" aria-label="Close menu">
+						<span></span><span></span>
+					</button>
+				</div>
 				<ul class="dp-nav__list">
 					<li class="dp-nav__item dp-nav__item--has-children">
 						<button type="button" class="dp-nav__trigger" aria-expanded="false" aria-controls="dp-submenu-company" id="dp-trigger-company">
@@ -23,7 +31,7 @@
 								<ul class="dp-nav__panel-links">
 									<li>
 										<a href="/about-us/">
-											<span class="dp-nav__link-title">Who we are</span>
+											<span class="dp-nav__link-title">Our story</span>
 											<span class="dp-nav__link-desc">Our story, vision, and operating philosophy</span>
 										</a>
 									</li>
@@ -75,10 +83,11 @@
 					<li class="dp-nav__item">
 						<a class="dp-nav__link" href="/sustainability/">Sustainability</a>
 					</li>
-					<li class="dp-nav__item dp-nav__item--mobile-only">
-						<a class="dp-nav__link" href="/contact-us/">Contact Us</a>
-					</li>
 				</ul>
+				<div class="dp-mobile-nav__actions">
+					<a class="dp-mobile-nav__primary" href="/contact-us/">Contact Us <span aria-hidden="true">↗</span></a>
+					<a class="dp-mobile-nav__secondary" href="/about-us/">Know More</a>
+				</div>
 			</nav>
 
 			<div class="dp-site-header__actions">
