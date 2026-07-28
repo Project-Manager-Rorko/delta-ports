@@ -485,7 +485,7 @@ function delta_ports_content_cargo() {
 			'Is storage available for weather-sensitive cargo?' => 'Yes. The terminal provides covered storage sheds suitable for weather-sensitive cargo, along with extensive open storage areas for bulk and non-perishable cargo.',
 			'What security measures are in place at the terminal?' => 'Security infrastructure includes CCTV surveillance, 24/7 security personnel, controlled access points with scanners, and strict vehicle inspection procedures.',
 		),
-		'Choose a plan that fits your business needs and budget. No hidden fees, no surprises-just straightforward pricing for powerful financial management.'
+		'Answers to common questions about our terminal operations, cargo handling, and logistics.'
 	);
 
 	return $out;
@@ -581,7 +581,7 @@ function delta_ports_content_logistics() {
 			'How is road access to the terminal managed?' => 'The terminal is connected via a dedicated curved cable-stayed bridge that provides direct highway access and bypasses city traffic, reducing congestion and delays.',
 			'How does integrated logistics improve cargo movement?' => 'By coordinating port operations with rail and road infrastructure, integrated logistics reduces dwell time, improves cargo flow, and enhances overall supply-chain efficiency.',
 		),
-		'Choose a plan that fits your business needs and budget. No hidden fees, no surprises-just straightforward pricing for powerful financial management.'
+		'Answers to common questions about our terminal operations, cargo handling, and logistics.'
 	);
 
 	return $out;

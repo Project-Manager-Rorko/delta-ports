@@ -173,3 +173,81 @@ function delta_ports_style_loader_tag( $html, $handle, $href, $media ) {
 	return $html;
 }
 add_filter( 'style_loader_tag', 'delta_ports_style_loader_tag', 10, 4 );
+
+/**
+ * Elevated home (dpx) layer — front page only. filemtime version busts cache on edit.
+ */
+function delta_ports_enqueue_elevate() {
+	if ( is_admin() || ! is_front_page() ) {
+		return;
+	}
+	$css = DELTA_PORTS_DIR . '/assets/css/elevate.css';
+	$js  = DELTA_PORTS_DIR . '/assets/js/elevate.js';
+	wp_enqueue_style(
+		'delta-ports-elevate',
+		DELTA_PORTS_URI . '/assets/css/elevate.css',
+		array( 'delta-ports-live-parity' ),
+		file_exists( $css ) ? filemtime( $css ) : DELTA_PORTS_VERSION
+	);
+	wp_enqueue_script(
+		'delta-ports-elevate',
+		DELTA_PORTS_URI . '/assets/js/elevate.js',
+		array(),
+		file_exists( $js ) ? filemtime( $js ) : DELTA_PORTS_VERSION,
+		array( 'in_footer' => true, 'strategy' => 'defer' )
+	);
+}
+add_action( 'wp_enqueue_scripts', 'delta_ports_enqueue_elevate', 20 );
+
+/**
+ * Global elevation layer — all front-end pages, loaded last.
+ */
+function delta_ports_enqueue_elevate_global() {
+	if ( is_admin() ) {
+		return;
+	}
+	$css = DELTA_PORTS_DIR . '/assets/css/elevate-global.css';
+	wp_enqueue_style(
+		'delta-ports-elevate-global',
+		DELTA_PORTS_URI . '/assets/css/elevate-global.css',
+		array( 'delta-ports-wide-screen' ),
+		file_exists( $css ) ? filemtime( $css ) : DELTA_PORTS_VERSION
+	);
+}
+add_action( 'wp_enqueue_scripts', 'delta_ports_enqueue_elevate_global', 30 );
+
+/**
+ * Global elevation JS — eager-load critical/dark-framed images (all pages).
+ */
+function delta_ports_enqueue_elevate_global_js() {
+	if ( is_admin() ) {
+		return;
+	}
+	$js = DELTA_PORTS_DIR . '/assets/js/elevate-global.js';
+	wp_enqueue_script(
+		'delta-ports-elevate-global-js',
+		DELTA_PORTS_URI . '/assets/js/elevate-global.js',
+		array(),
+		file_exists( $js ) ? filemtime( $js ) : DELTA_PORTS_VERSION,
+		array( 'in_footer' => true, 'strategy' => 'defer' )
+	);
+}
+add_action( 'wp_enqueue_scripts', 'delta_ports_enqueue_elevate_global_js', 31 );
+
+/**
+ * Slide-in drawer menu JS (all pages).
+ */
+function delta_ports_enqueue_nav_drawer() {
+	if ( is_admin() ) {
+		return;
+	}
+	$js = DELTA_PORTS_DIR . '/assets/js/nav-drawer.js';
+	wp_enqueue_script(
+		'delta-ports-nav-drawer',
+		DELTA_PORTS_URI . '/assets/js/nav-drawer.js',
+		array(),
+		file_exists( $js ) ? filemtime( $js ) : DELTA_PORTS_VERSION,
+		array( 'in_footer' => true, 'strategy' => 'defer' )
+	);
+}
+add_action( 'wp_enqueue_scripts', 'delta_ports_enqueue_nav_drawer', 32 );

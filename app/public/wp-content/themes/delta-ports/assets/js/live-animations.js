@@ -45,7 +45,20 @@
 
 	function initCounters() {
 		var numbers = document.querySelectorAll('[data-count-to]');
-		if (!numbers.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		if (!numbers.length) return;
+
+		function finalText(number) {
+			var target = Number(number.getAttribute('data-count-to')) || 0;
+			return target + (number.getAttribute('data-suffix') || '');
+		}
+
+		// Fallback: show the real value immediately so a counter never sticks at 0.
+		numbers.forEach(function (number) { number.textContent = finalText(number); });
+
+		// No motion (or no observer): keep the real values, skip the animation.
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+			return;
+		}
 
 		function run(number) {
 			if (number.dataset.counted) return;
@@ -64,15 +77,11 @@
 					var progress = Math.min(1, (now - startedAt) / 1000);
 					number.textContent = Math.round(target * (1 - Math.pow(1 - progress, 3))) + suffix;
 					if (progress < 1) requestAnimationFrame(frame);
+					else number.textContent = finalText(number);
 				}
 
 				requestAnimationFrame(frame);
 			}, Math.max(0, index) * 130);
-		}
-
-		if (!('IntersectionObserver' in window)) {
-			numbers.forEach(run);
-			return;
 		}
 
 		var observer = new IntersectionObserver(function (entries) {

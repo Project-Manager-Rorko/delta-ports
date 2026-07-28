@@ -18,3 +18,5 @@ require_once DELTA_PORTS_DIR . '/inc/enqueue.php';
 require_once DELTA_PORTS_DIR . '/inc/seo-performance.php';
 require_once DELTA_PORTS_DIR . '/inc/patterns.php';
 require_once DELTA_PORTS_DIR . '/inc/seed-content.php';
+require_once DELTA_PORTS_DIR . '/inc/staging-guard.php';
+require_once DELTA_PORTS_DIR . '/inc/redirects.php';
