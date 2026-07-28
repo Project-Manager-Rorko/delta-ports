@@ -184,33 +184,13 @@
   font-family:var(--display)!important;
 }
 
-/* Banner pages: kill body header offset so no gray strip above hero */
-body.home,
-body:has(.dpx-home),
-body:has(.dpx-hero),
-body:has(.dpx-inner-hero),
-body:has(.dpx-page){
-  padding-top:0!important;
-  margin-top:0!important;
-  background:#0A0F1E;
+/* Banner flush — reinforce (elevate-global has final nuclear override) */
+body.home,body.front-page,body:has(.dpx-home),body:has(.dpx-hero){
+  padding-top:0!important;margin-top:0!important;background:#0A0F1E
 }
-body.home .dp-main,
-body:has(.dpx-home) .dp-main,
-body:has(.dpx-hero) .dp-main,
-body:has(.dpx-inner-hero) .dp-main,
-body:has(.dpx-page) .dp-main{
-  padding-top:0!important;
-  margin-top:0!important;
+body.home .dp-main,body.front-page .dp-main,body:has(.dpx-home) .dp-main,body:has(.dpx-hero) .dp-main{
+  padding-top:0!important;margin-top:0!important
 }
-/* Heroes flush under fixed header — no empty band */
-.dpx-hero,
-.dpx-inner-hero{
-  margin-top:0!important;
-  top:0!important;
-}
-.dp-site-header,
-#dp-site-header{
-  top:0!important;
-  margin:0!important;
-  padding-top:0!important;
-}
+.dpx-hero{margin-top:0!important;top:0!important}
+.dpx-home{margin-top:0!important;padding-top:0!important}
+.dpx-home > .dpx-hero:first-child{margin-top:0!important}

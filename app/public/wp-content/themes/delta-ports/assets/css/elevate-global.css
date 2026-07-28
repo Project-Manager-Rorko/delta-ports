@@ -97,7 +97,7 @@
 /* ---------- SHARED HEADER: transparent over hero -> solid on scroll ---------- */
 
 /* ---------- SHARED HEADER: transparent over hero -> solid only after ~80px ---------- */
-.dp-site-header,#dp-site-header{padding-top:0!important;padding-left:0!important;padding-right:0!important}
+.dp-site-header,#dp-site-header{padding:0!important;margin:0!important;top:0!important}
 .dp-site-header{transition:background .4s cubic-bezier(.22,.61,.36,1),box-shadow .4s,backdrop-filter .4s}
 .dp-site-header:not(.is-compact):not(.is-nav-open){
 	background:linear-gradient(180deg,rgba(8,12,26,.55) 0%,rgba(8,12,26,.14) 60%,rgba(8,12,26,0) 100%);
@@ -579,3 +579,62 @@ body.page-id-3 .dpx-precta a,body.page-id-27 .dpx-precta a{color:inherit}
 body.page-id-149 .dp-main :is(.wp-block-group,.wp-block-columns,.wp-block-query,section,.dp-media-shell,.dp-media-grid){background-color:transparent!important}
 body.page-id-149 .dp-media-card{background:var(--dpx-navy)!important}
 body.page-id-149 .dp-media-card .wp-block-post-featured-image:empty,body.page-id-149 .dp-media-card .wp-block-post-featured-image:not(:has(img)){background:var(--dpx-navy)!important}
+
+/* ==========================================================================
+   BANNER FLUSH TOP — loaded last; kills gray empty strip above heroes
+   ========================================================================== */
+html{margin:0!important;padding:0!important}
+html body,
+html body.home,
+html body.front-page,
+html body.page,
+html body.logged-in{
+	padding-top:0!important;
+	margin-top:0!important;
+}
+/* WP admin bar only */
+html body.admin-bar{padding-top:32px!important}
+@media screen and (max-width:782px){
+	html body.admin-bar{padding-top:46px!important}
+}
+/* Fixed header flush to viewport top (or under admin bar) */
+html body .dp-site-header,
+html body #dp-site-header,
+html body header.dpx-bar{
+	top:0!important;
+	margin:0!important;
+	padding:0!important;
+	padding-top:0!important;
+	padding-bottom:0!important;
+}
+html body.admin-bar .dp-site-header,
+html body.admin-bar #dp-site-header{top:32px!important}
+@media screen and (max-width:782px){
+	html body.admin-bar .dp-site-header,
+	html body.admin-bar #dp-site-header{top:46px!important}
+}
+/* Block theme wrappers must not insert a top gap */
+.wp-site-blocks,
+.wp-site-blocks > * ,
+.wp-block-template-part,
+header.wp-block-template-part,
+main.wp-block-group.dp-main,
+main.dp-main{
+	margin-top:0!important;
+	padding-top:0!important;
+}
+.wp-site-blocks > * + *{margin-block-start:0!important}
+/* Heroes start at the top of the document flow */
+.dpx-hero,
+.dpx-inner-hero,
+.dpx-home > .dpx-hero:first-child,
+.dpx-page > .dpx-inner-hero:first-child{
+	margin-top:0!important;
+	margin-block-start:0!important;
+	top:0!important;
+}
+/* Non-banner pages only: offset content under fixed header */
+html body:not(.home):not(.front-page):not(:has(.dpx-hero)):not(:has(.dpx-inner-hero)):not(:has(.dpx-page)) main.dp-main,
+html body:not(.home):not(.front-page):not(:has(.dpx-hero)):not(:has(.dpx-inner-hero)):not(:has(.dpx-page)) .dp-main{
+	padding-top:var(--dp-header-h,88px)!important;
+}

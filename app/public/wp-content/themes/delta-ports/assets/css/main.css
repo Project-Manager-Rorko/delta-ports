@@ -629,51 +629,34 @@ body.admin-bar #dp-site-header {
 	}
 }
 
-/* Content starts below fixed header (non-banner pages keep this offset).
-   Banner / cinematic pages zero this in elevate.css + elevate-global.css. */
+/*
+ * Body top offset strategy (CRITICAL — no gray strip above banners):
+ * Default = 0 so full-bleed heroes start at the viewport top under the fixed header.
+ * Only non-banner pages get content offset via .dp-main padding.
+ */
+html,
 body {
-	padding-top: var(--dp-header-h) !important;
-}
-
-/* Force no top gap on pages whose first content is a full-bleed hero banner */
-body.home,
-body:has(.dpx-hero),
-body:has(.dpx-inner-hero),
-body:has(.dpx-home),
-body:has(.dpx-page) {
 	padding-top: 0 !important;
+	margin-top: 0 !important;
 }
 
+/* WP admin bar only (not header-height gap) */
 body.admin-bar {
-	padding-top: calc(var(--dp-header-h) + 32px) !important;
+	padding-top: 32px !important;
 }
-
-body.admin-bar.home,
-body.admin-bar:has(.dpx-hero),
-body.admin-bar:has(.dpx-inner-hero),
-body.admin-bar:has(.dpx-home),
-body.admin-bar:has(.dpx-page) {
-	padding-top: 32px !important; /* WP admin bar only */
-}
-
 @media screen and (max-width: 782px) {
 	body.admin-bar {
-		padding-top: calc(var(--dp-header-h) + 46px) !important;
-	}
-	body.admin-bar.home,
-	body.admin-bar:has(.dpx-hero),
-	body.admin-bar:has(.dpx-inner-hero),
-	body.admin-bar:has(.dpx-home),
-	body.admin-bar:has(.dpx-page) {
 		padding-top: 46px !important;
 	}
 }
 
-/*
- * Banner heroes sit at top: 0 under the fixed header (live overlay style).
- * Negative margin cancels body padding so the banner starts at the viewport top;
- * header stays above via z-index. Inner padding on heroes keeps text clear of nav.
- */
+/* Non-banner pages: push main content below fixed header */
+body:not(.home):not(.front-page):not(:has(.dpx-hero)):not(:has(.dpx-inner-hero)):not(:has(.dpx-home)):not(:has(.dpx-page)) .dp-main,
+body:not(.home):not(.front-page):not(:has(.dpx-hero)):not(:has(.dpx-inner-hero)):not(:has(.dpx-home)):not(:has(.dpx-page)) main.dp-main {
+	padding-top: var(--dp-header-h, 88px) !important;
+}
+
+/* Full-bleed heroes — never pull with negative margin (body offset is already 0) */
 .dp-home-hero,
 .dp-ops-hero,
 .dp-about-hero,
@@ -683,55 +666,12 @@ body.admin-bar:has(.dpx-page) {
 .dp-gb-page-hero,
 .aw-hero,
 .aw-inner-hero,
-.dpx-inner-hero {
-	margin-top: calc(-1 * var(--dp-header-h, 72px)) !important;
+.dpx-inner-hero,
+.dpx-hero {
+	margin-top: 0 !important;
 	position: relative;
 	z-index: 1;
-	top: 0;
-}
-
-/* When body offset is already zero, do not pull the hero further up */
-body:has(.dpx-page) .dpx-inner-hero,
-body:has(.dpx-inner-hero) .dpx-inner-hero,
-body.home .dpx-hero {
-	margin-top: 0 !important;
-}
-
-body.admin-bar .dp-home-hero,
-body.admin-bar .dp-ops-hero,
-body.admin-bar .dp-about-hero,
-body.admin-bar .dp-lead-hero,
-body.admin-bar .dp-contact-hero,
-body.admin-bar .dp-gb-home-hero,
-body.admin-bar .dp-gb-page-hero,
-body.admin-bar .aw-hero,
-body.admin-bar .aw-inner-hero {
-	margin-top: calc(-1 * (var(--dp-header-h, 72px) + 32px)) !important;
-}
-
-body.admin-bar:has(.dpx-page) .dpx-inner-hero,
-body.admin-bar:has(.dpx-inner-hero) .dpx-inner-hero,
-body.admin-bar.home .dpx-hero {
-	margin-top: 0 !important;
-}
-
-@media screen and (max-width: 782px) {
-	body.admin-bar .dp-home-hero,
-	body.admin-bar .dp-ops-hero,
-	body.admin-bar .dp-about-hero,
-	body.admin-bar .dp-lead-hero,
-	body.admin-bar .dp-contact-hero,
-	body.admin-bar .dp-gb-home-hero,
-	body.admin-bar .dp-gb-page-hero,
-	body.admin-bar .aw-hero,
-	body.admin-bar .aw-inner-hero {
-		margin-top: calc(-1 * (var(--dp-header-h, 72px) + 46px)) !important;
-	}
-	body.admin-bar:has(.dpx-page) .dpx-inner-hero,
-	body.admin-bar:has(.dpx-inner-hero) .dpx-inner-hero,
-	body.admin-bar.home .dpx-hero {
-		margin-top: 0 !important;
-	}
+	top: 0 !important;
 }
 
 /* Header always paints above banners */
@@ -1745,9 +1685,9 @@ main.dp-main,
 }
 
 @media (max-width: 960px) {
-	.dp-site-header {
-		padding: 0.5rem 0.65rem 0;
-		padding-left: 0 !important;
+	.dp-site-header,
+	#dp-site-header {
+		padding: 0 !important;
 	}
 
 	.dp-site-header__bar {
