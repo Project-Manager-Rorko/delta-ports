@@ -1,10 +1,10 @@
 <!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"dp-main","layout":{"type":"default"}} -->
-<main class="wp-block-group dp-main">
+<!-- wp:group {"tagName":"main","className":"dp-main","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group dp-main" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0">
 
 <!-- wp:html -->
-<section class="dpx-inner-hero" style="--dpx-hero-img:url('/wp-content/themes/delta-ports/assets/images/PLO-banner-scaled.webp')">
+<section class="dpx-inner-hero dpx-inner-hero--soft" style="--dpx-hero-img:url('/wp-content/themes/delta-ports/assets/images/PLO-banner-scaled.webp')">
 	<div class="dpx-inner-hero__scrim"></div>
 	<div class="dpx-wrap dpx-inner-hero__in">
 		<nav class="dpx-crumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span>Contact</span></nav>
@@ -17,49 +17,47 @@
 
 <!-- wp:group {"className":"dpx-contact dpx-secpad","layout":{"type":"default"}} -->
 <div class="wp-block-group dpx-contact dpx-secpad">
-	<!-- wp:columns {"className":"dpx-contact__grid"} -->
-	<div class="wp-block-columns dpx-contact__grid">
-		<!-- wp:column {"width":"58%","className":"dpx-contact__form"} -->
-		<div class="wp-block-column dpx-contact__form" style="flex-basis:58%">
-			<!-- wp:html -->
+	<!-- wp:html -->
+	<div class="dpx-contact__shell">
+		<div class="dpx-contact__form-block">
 			<span class="dpx-eyebrow">Business enquiry</span>
 			<h2 class="dpx-h2">Discuss your requirements</h2>
 			<p class="dpx-lead">Tell us about your terminal capacity, cargo handling or logistics needs and our team will get back to you.</p>
-			<!-- /wp:html -->
-			<!-- wp:shortcode -->[contact-form-7 title="Business Enquiry"]<!-- /wp:shortcode -->
 		</div>
-		<!-- /wp:column -->
-		<!-- wp:column {"width":"42%","className":"dpx-contact__aside"} -->
-		<div class="wp-block-column dpx-contact__aside" style="flex-basis:42%">
-			<!-- wp:html -->
-			<div class="dpx-office dpx-office--primary">
-				<p class="dpx-office__tag">Corporate Office</p>
-				<p class="dpx-office__addr">Delta House, 6th Floor, Bangra-Kulur Road, Kulur, Mangalore-575013, Karnataka, India</p>
-				<a class="dpx-office__line" href="tel:+919902395555">
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC2633" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.1 9.5a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"/></svg>
-					<span>+91 99023 95555</span>
-				</a>
-				<a class="dpx-office__line" href="mailto:info@deltaports.com">
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC2633" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-					<span>info@deltaports.com</span>
-				</a>
-				<a class="dpx-office__map" href="https://www.google.com/maps/search/?api=1&amp;query=12.905,74.870" target="_blank" rel="noopener noreferrer">View on map <span aria-hidden="true">↗</span></a>
-			</div>
-			<div class="dpx-office">
-				<p class="dpx-office__tag">Bangalore Office</p>
-				<p class="dpx-office__addr">Tower-B, Unit No. 407, No. 84, Mahatma Gandhi Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001</p>
-				<a class="dpx-office__map" href="https://www.google.com/maps/search/?api=1&amp;query=12.9716,77.6197" target="_blank" rel="noopener noreferrer">View on map <span aria-hidden="true">↗</span></a>
-			</div>
-			<div class="dpx-office">
-				<p class="dpx-office__tag">Saudi Arabia Office</p>
-				<p class="dpx-office__addr">King Faisal Ibn Abd Al Aziz, Al Khalidiyyah Al Janubiyyah, Dammam 32221, Saudi Arabia</p>
-				<a class="dpx-office__map" href="https://www.google.com/maps/search/?api=1&amp;query=26.4207,50.0888" target="_blank" rel="noopener noreferrer">View on map <span aria-hidden="true">↗</span></a>
-			</div>
-			<!-- /wp:html -->
-		</div>
-		<!-- /wp:column -->
 	</div>
-	<!-- /wp:columns -->
+	<!-- /wp:html -->
+
+	<!-- wp:shortcode -->
+[delta_enquiry_form]
+	<!-- /wp:shortcode -->
+
+	<!-- wp:html -->
+	<div class="dpx-contact__offices">
+		<div class="dpx-office dpx-office--primary">
+			<p class="dpx-office__tag">Corporate Office</p>
+			<p class="dpx-office__addr">Delta House, 6th Floor, Bangra-Kulur Road, Kulur, Mangalore-575013, Karnataka, India</p>
+			<a class="dpx-office__line" href="tel:+919902395555">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC2633" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.1 9.5a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"/></svg>
+				<span>+91 99023 95555</span>
+			</a>
+			<a class="dpx-office__line" href="mailto:info@deltaports.com">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EC2633" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+				<span>info@deltaports.com</span>
+			</a>
+			<a class="dpx-office__map" href="https://www.google.com/maps/search/?api=1&amp;query=12.905,74.870" target="_blank" rel="noopener noreferrer">View on map <span aria-hidden="true">↗</span></a>
+		</div>
+		<div class="dpx-office">
+			<p class="dpx-office__tag">Bangalore Office</p>
+			<p class="dpx-office__addr">Tower-B, Unit No. 407, No. 84, Mahatma Gandhi Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001</p>
+			<a class="dpx-office__map" href="https://www.google.com/maps/search/?api=1&amp;query=12.9716,77.6197" target="_blank" rel="noopener noreferrer">View on map <span aria-hidden="true">↗</span></a>
+		</div>
+		<div class="dpx-office">
+			<p class="dpx-office__tag">Saudi Arabia Office</p>
+			<p class="dpx-office__addr">King Faisal Ibn Abd Al Aziz, Al Khalidiyyah Al Janubiyyah, Dammam 32221, Saudi Arabia</p>
+			<a class="dpx-office__map" href="https://www.google.com/maps/search/?api=1&amp;query=26.4207,50.0888" target="_blank" rel="noopener noreferrer">View on map <span aria-hidden="true">↗</span></a>
+		</div>
+	</div>
+	<!-- /wp:html -->
 </div>
 <!-- /wp:group -->
 
@@ -76,7 +74,9 @@
 	<!-- /wp:html -->
 	<!-- wp:group {"className":"dpx-careers__formwrap","layout":{"type":"constrained","contentSize":"760px"}} -->
 	<div class="wp-block-group dpx-careers__formwrap">
-		<!-- wp:shortcode -->[contact-form-7 title="Talent Network"]<!-- /wp:shortcode -->
+		<!-- wp:shortcode -->
+[delta_talent_form]
+		<!-- /wp:shortcode -->
 	</div>
 	<!-- /wp:group -->
 </div>

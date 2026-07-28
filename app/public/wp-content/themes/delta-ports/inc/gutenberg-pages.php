@@ -718,32 +718,24 @@ function delta_ports_content_leadership() {
  * @return string
  */
 function delta_ports_content_privacy() {
+	/* Content templates: page-privacy-policy.html (from deltaports.com privacy policy). */
 	$body  = delta_ports_gb_heading( 'Privacy Policy', 1 );
-	$body .= delta_ports_gb_paragraph( 'Website: https://www.groupdelta.in' );
-	$body .= delta_ports_gb_paragraph( 'Group Delta operates the website https://www.groupdelta.in. We are committed to protecting the privacy of visitors and users of our Website. By accessing or using the Website, you agree to the terms of this Privacy Policy.' );
-	$body .= delta_ports_gb_heading( 'Sources and Categories of Personal Data Concerned', 2 );
-	$body .= delta_ports_gb_paragraph( 'We may collect personal information that you voluntarily provide when you contact us through forms, email, or other communication channels. This may include your name, email address, phone number, company details, and any other information you choose to share. We may also automatically collect technical information such as your IP address, browser type, pages visited, and date and time of access to improve website functionality and security.' );
-	$body .= delta_ports_gb_heading( 'Use of Information', 2 );
-	$body .= delta_ports_gb_paragraph( 'The information collected is used to respond to inquiries, provide and improve our services, communicate with you, operate and maintain the Website, and ensure its proper functioning.' );
-	$body .= delta_ports_gb_paragraph( 'We do not sell, rent, or trade your personal information to third parties. Information may be shared with trusted service providers or disclosed where required by law.' );
-	$body .= delta_ports_gb_heading( 'Cookies', 2 );
-	$body .= delta_ports_gb_paragraph( 'Our Website may use cookies and similar technologies to enhance your browsing experience and analyze website traffic. Cookies are small text files stored on your device. You may disable cookies through your browser settings; however, some features of the Website may not function properly if cookies are disabled.' );
-	$body .= delta_ports_gb_heading( 'Data Security', 2 );
-	$body .= delta_ports_gb_paragraph( 'We implement reasonable administrative and technical safeguards to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of online transmission is completely secure, and we cannot guarantee absolute security.' );
-	$body .= delta_ports_gb_heading( 'Third-Party Links', 2 );
-	$body .= delta_ports_gb_paragraph( 'The Website may contain links to external websites for your convenience. We are not responsible for the privacy practices or content of such third-party websites.' );
-	$body .= delta_ports_gb_heading( 'User Rights – Access to Your Personal Data', 2 );
-	$body .= delta_ports_gb_paragraph( 'Subject to applicable laws, you may request access to, correction of, or deletion of your personal information by contacting us using the details below.' );
-	$body .= delta_ports_gb_heading( 'Changes to This Policy', 2 );
-	$body .= delta_ports_gb_paragraph( 'We reserve the right to update or modify this Privacy Policy at any time. Any changes will be posted on this page with an updated effective date.' );
+	$body .= delta_ports_gb_paragraph( 'At https://deltaports.com/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by https://deltaports.com/ and how we use it.' );
+	$body .= delta_ports_gb_paragraph( 'If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.' );
+	$body .= delta_ports_gb_heading( 'Consent', 2 );
+	$body .= delta_ports_gb_paragraph( 'By using our website, you hereby consent to our Privacy Policy and agree to its terms.' );
+	$body .= delta_ports_gb_heading( 'Information we collect', 2 );
+	$body .= delta_ports_gb_paragraph( 'The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information. If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.' );
+	$body .= delta_ports_gb_heading( 'How we use your information', 2 );
+	$body .= delta_ports_gb_paragraph( 'We use the information we collect to provide, operate and maintain our website; improve and personalize it; understand how you use it; develop new features; communicate with you; send emails; and find and prevent fraud.' );
 	$body .= delta_ports_gb_heading( 'Contact Us', 2 );
-	$body .= delta_ports_gb_paragraph( 'Email: enquiries@groupdelta.in' );
+	$body .= delta_ports_gb_paragraph( 'Email: info@deltaports.com' );
 	$body .= delta_ports_gb_paragraph( 'Phone: +91 99023 95555' );
 
 	return delta_ports_gb_group(
 		array(
-			'className' => 'dp-gb-section dp-gb-legal',
-			'layout'    => array( 'type' => 'constrained', 'contentSize' => '800px' ),
+			'className' => 'dp-gb-section dp-gb-legal dpx-legal',
+			'layout'    => array( 'type' => 'constrained', 'contentSize' => '820px' ),
 		),
 		$body
 	);
@@ -755,33 +747,28 @@ function delta_ports_content_privacy() {
  * @return string
  */
 function delta_ports_content_terms() {
-	$body  = delta_ports_gb_heading( 'Terms & Conditions', 1 );
-	$body .= delta_ports_gb_paragraph( 'Last updated: May 03, 2026' );
-	$body .= delta_ports_gb_paragraph( 'Please read these terms and conditions carefully before using our service.' );
-	$body .= delta_ports_gb_heading( '1. Introduction', 2 );
-	$body .= delta_ports_gb_paragraph( 'Visitors to this website are bound by the following Terms and Conditions (“Terms”). Please read them carefully before using this site. If you do not agree with any of these Terms, please discontinue use of the website immediately.' );
-	$body .= delta_ports_gb_paragraph( 'The content of this website is provided for general information and use only and is subject to change without notice.' );
-	$body .= delta_ports_gb_heading( '2. Cookies and Information Processing', 2 );
-	$body .= delta_ports_gb_paragraph( 'This website may use cookies to monitor browsing preferences. By continuing to use the website, you consent to such usage. Certain information may be stored and processed in accordance with applicable laws.' );
-	$body .= delta_ports_gb_heading( '3. Warranties and Limitation of Liability', 2 );
-	$body .= delta_ports_gb_paragraph( 'Neither Delta Group nor any third parties make any warranty or guarantee as to the accuracy, timeliness, completeness, performance, or suitability of the information and materials available on this website for any particular purpose.' );
-	$body .= delta_ports_gb_paragraph( 'The information may contain inaccuracies or errors, and Delta Group expressly excludes liability for any such inaccuracies or errors to the fullest extent permitted by law. Your use of any information or materials on this website is entirely at your own risk.' );
-	$body .= delta_ports_gb_heading( '4. Intellectual Property', 2 );
-	$body .= delta_ports_gb_paragraph( 'All content on this website, including but not limited to design, layout, appearance, graphics, and logos, is owned by or licensed to Delta Group. Unauthorized reproduction or use is strictly prohibited.' );
-	$body .= delta_ports_gb_heading( '5. Links to Other Websites', 2 );
-	$body .= delta_ports_gb_paragraph( 'This website may include links to third-party websites for convenience. Delta Group does not endorse and is not responsible for the content, availability, or accuracy of such external websites.' );
-	$body .= delta_ports_gb_heading( '6. Unauthorized Use', 2 );
-	$body .= delta_ports_gb_paragraph( 'Unauthorized use of this website may result in a claim for damages and/or constitute a criminal offence.' );
-	$body .= delta_ports_gb_heading( '7. Governing Law and Dispute Resolution', 2 );
-	$body .= delta_ports_gb_paragraph( 'These Terms shall be governed by and interpreted in accordance with the laws of India, excluding its conflicts of law rules. Any disputes arising in connection with this website shall be subject to the exclusive jurisdiction of the competent courts in Ahmedabad, India.' );
+	/* Content templates: page-terms-conditions.html (from deltaports.com terms). */
+	$body  = delta_ports_gb_heading( 'Terms and Conditions', 1 );
+	$body .= delta_ports_gb_heading( 'Introduction', 2 );
+	$body .= delta_ports_gb_paragraph( 'These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, https://deltaports.com/. By using this Website, you agreed to accept all terms and conditions written here. Minors or people below 18 years old are not allowed to use this Website.' );
+	$body .= delta_ports_gb_heading( 'Intellectual Property Rights', 2 );
+	$body .= delta_ports_gb_paragraph( 'Other than the content you own, under these Terms, Delta Ports and/or its licensors own all the intellectual property rights and materials contained in this Website. You are granted a limited license only for the purposes of viewing the material contained on this Website.' );
+	$body .= delta_ports_gb_heading( 'Restrictions', 2 );
+	$body .= delta_ports_gb_paragraph( 'You are specifically restricted from publishing, selling, commercializing, or publicly performing Website material; using this Website in any way that is damaging or unlawful; data mining; or using this Website for advertising or marketing without authorization.' );
+	$body .= delta_ports_gb_heading( 'No warranties', 2 );
+	$body .= delta_ports_gb_paragraph( 'This Website is provided “as is,” with all faults, and Delta Ports expresses no representations or warranties of any kind related to this Website or the materials contained on this Website.' );
+	$body .= delta_ports_gb_heading( 'Limitation of liability', 2 );
+	$body .= delta_ports_gb_paragraph( 'In no event shall Delta Ports, nor any of its officers, directors and employees, be held liable for anything arising out of or in any way connected with your use of this Website.' );
+	$body .= delta_ports_gb_heading( 'Governing Law & Jurisdiction', 2 );
+	$body .= delta_ports_gb_paragraph( 'These Terms will be governed by and interpreted in accordance with the laws of India, and you submit to the non-exclusive jurisdiction of the competent courts in India for the resolution of any disputes.' );
 	$body .= delta_ports_gb_heading( 'Contact Us', 2 );
-	$body .= delta_ports_gb_paragraph( 'Email: enquiries@groupdelta.in' );
+	$body .= delta_ports_gb_paragraph( 'Email: info@deltaports.com' );
 	$body .= delta_ports_gb_paragraph( 'Phone: +91 99023 95555' );
 
 	return delta_ports_gb_group(
 		array(
-			'className' => 'dp-gb-section dp-gb-legal',
-			'layout'    => array( 'type' => 'constrained', 'contentSize' => '800px' ),
+			'className' => 'dp-gb-section dp-gb-legal dpx-legal',
+			'layout'    => array( 'type' => 'constrained', 'contentSize' => '820px' ),
 		),
 		$body
 	);

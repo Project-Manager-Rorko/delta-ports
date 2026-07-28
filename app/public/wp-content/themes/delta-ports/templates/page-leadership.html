@@ -1,9 +1,11 @@
 <!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
-<!-- wp:group {"tagName":"main","className":"dp-main","layout":{"type":"default"}} -->
-<main class="wp-block-group dp-main">
+<!-- wp:group {"tagName":"main","className":"dp-main","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group dp-main" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0">
 <!-- wp:html -->
 <div class="dpx-page">
-	<section class="dpx-inner-hero" style="--dpx-hero-img:url('/wp-content/themes/delta-ports/assets/images/des-banner-Port-leadership.webp')">
+
+	<!-- HERO — lighter overlay so banner image reads clearly -->
+	<section class="dpx-inner-hero dpx-inner-hero--full dpx-inner-hero--soft dpx-inner-hero--lead" style="--dpx-hero-img:url('/wp-content/themes/delta-ports/assets/images/delta-port-leadership-new-img1.webp')">
 		<div class="dpx-inner-hero__scrim"></div>
 		<div class="dpx-inner-hero__coords"><span>N 12.90&deg;</span><span>&mdash;</span><span>E 74.87&deg;</span><span>&mdash;</span><span>Mangalore</span></div>
 		<div class="dpx-wrap dpx-inner-hero__in">
@@ -19,7 +21,6 @@
 			<p class="dpx-pstmt__big">Decisions made with a <b>long-term perspective</b>, balancing operational excellence with responsibility.</p>
 			<div>
 				<p>This philosophy ensures that decisions are made with a long-term perspective, balancing operational excellence with responsibility to people, partners, and the environments in which the Group operates.</p>
-				<p>The businesses that endure are not those that resist change; they are those that lead it. At Group Delta, innovation is not a department or a strategy. It is a mindset that runs through everything we do.</p>
 			</div>
 		</div>
 	</section>
@@ -28,20 +29,89 @@
 		<div class="dpx-wrap">
 			<div class="dpx-sec__head dpx-reveal"><span class="dpx-eyebrow">Meet the team</span><h2 class="dpx-h2">Steering Delta Ports</h2></div>
 			<div class="dpx-team dpx-reveal">
-				<div class="dpx-teamc"><div class="dpx-teamc__ph"><img src="/wp-content/themes/delta-ports/assets/images/leader-ahmed-mohiuddin.png" alt="Ahmed Mohiuddin" loading="lazy"></div><h3>Ahmed Mohiuddin</h3><p>Managing Director</p></div>
-				<div class="dpx-teamc"><div class="dpx-teamc__ph"><img src="/wp-content/themes/delta-ports/assets/images/leader-shamil-ahmed.png" alt="Shamil Ahmed" loading="lazy"></div><h3>Shamil Ahmed</h3><p>Director</p></div>
-				<div class="dpx-teamc"><div class="dpx-teamc__ph"><img src="/wp-content/themes/delta-ports/assets/images/leader-mohammed-shahzeer.png" alt="Mohammed Shahzeer" loading="lazy"></div><h3>Mohammed Shahzeer</h3><p>Director</p></div>
+				<article class="dpx-teamc">
+					<div class="dpx-teamc__ph"><img src="/wp-content/themes/delta-ports/assets/images/leader-ahmed-mohiuddin.png" alt="Ahmed Mohiuddin" loading="lazy" decoding="async"></div>
+					<h3>Ahmed Mohiuddin</h3>
+					<p>Managing Director</p>
+					<button type="button" class="dpx-teamc__bio" data-bio-open="ahmed-mohiuddin" aria-haspopup="dialog" aria-controls="dp-bio-ahmed-mohiuddin">Read bio</button>
+				</article>
+				<article class="dpx-teamc">
+					<div class="dpx-teamc__ph"><img src="/wp-content/themes/delta-ports/assets/images/leader-shamil-ahmed.png" alt="Shamil Ahmed" loading="lazy" decoding="async"></div>
+					<h3>Shamil Ahmed</h3>
+					<p>Director</p>
+					<button type="button" class="dpx-teamc__bio" data-bio-open="shamil-ahmed" aria-haspopup="dialog" aria-controls="dp-bio-shamil-ahmed">Read bio</button>
+				</article>
+				<article class="dpx-teamc">
+					<div class="dpx-teamc__ph"><img src="/wp-content/themes/delta-ports/assets/images/leader-mohammed-shahzeer.png" alt="Mohammed Shahzeer" loading="lazy" decoding="async"></div>
+					<h3>Mohammed Shahzeer</h3>
+					<p>Director</p>
+					<button type="button" class="dpx-teamc__bio" data-bio-open="mohammed-shahzeer" aria-haspopup="dialog" aria-controls="dp-bio-mohammed-shahzeer">Read bio</button>
+				</article>
 			</div>
 		</div>
 	</section>
 
-	<section class="dpx-sec dpx-sec--line">
-		<div class="dpx-wrap dpx-reveal" style="text-align:center;display:grid;justify-items:center;gap:1.4rem">
+	<!-- From the leadership — two lines only; flush into CTA -->
+	<section class="dpx-sec dpx-sec--line dpx-sec--flush">
+		<div class="dpx-wrap dpx-reveal dpx-lead-quote">
 			<span class="dpx-eyebrow" style="justify-content:center">From the leadership</span>
-			<p class="dpx-quote" style="margin:0 auto;text-align:center">The future belongs to those willing to <b>build it.</b> We intend to be among them.</p>
-			<p class="dpx-lead" style="margin-inline:auto">To our clients, partners, and teams: you are the reason we strive for more. The journey ahead is our most exciting yet.</p>
+			<p class="dpx-quote">The future belongs to those willing to <b>build it.</b> We intend to be among them.</p>
 		</div>
 	</section>
+
+</div>
+
+<!-- Bio drawer: slides in from the right for each profile -->
+<div class="dp-bio-drawer" id="dp-bio-drawer" aria-hidden="true">
+	<div class="dp-bio-drawer__backdrop" data-bio-close tabindex="-1"></div>
+	<div class="dp-bio-drawer__shell">
+		<div class="dp-bio-drawer__panel" id="dp-bio-ahmed-mohiuddin" data-bio-panel="ahmed-mohiuddin" role="dialog" aria-modal="true" aria-labelledby="dp-bio-title-ahmed-mohiuddin" hidden>
+			<button type="button" class="dp-bio-drawer__close" data-bio-close aria-label="Close bio"><span aria-hidden="true">&times;</span></button>
+			<div class="dp-bio-drawer__scroll">
+				<div class="dp-bio-drawer__meta">
+					<h3 id="dp-bio-title-ahmed-mohiuddin">Ahmed Mohiuddin</h3>
+					<p class="dp-bio-drawer__role">Managing Director</p>
+				</div>
+				<h4 class="dp-bio-drawer__quote">A journey of a thousand miles begins with a single step</h4>
+				<div class="dp-bio-drawer__body">
+					<p>Every great enterprise is built twice — first in vision, then in perseverance. At Group Delta, we started with a clear purpose: to deliver port services of the highest standard, with integrity at every step. Over the years, that purpose has expanded across industries and geographies, but the core of who we are has never changed. We build on trust. We grow through people. And we measure success not just by what we achieve, but by the value we create for those we serve.</p>
+					<p>To our clients, partners, and teams: you are the reason we strive for more. The journey ahead is our most exciting yet.</p>
+					<p class="dp-bio-drawer__placeholder"><em>Additional bio content can be added here.</em></p>
+				</div>
+			</div>
+		</div>
+		<div class="dp-bio-drawer__panel" id="dp-bio-shamil-ahmed" data-bio-panel="shamil-ahmed" role="dialog" aria-modal="true" aria-labelledby="dp-bio-title-shamil-ahmed" hidden>
+			<button type="button" class="dp-bio-drawer__close" data-bio-close aria-label="Close bio"><span aria-hidden="true">&times;</span></button>
+			<div class="dp-bio-drawer__scroll">
+				<div class="dp-bio-drawer__meta">
+					<h3 id="dp-bio-title-shamil-ahmed">Shamil Ahmed</h3>
+					<p class="dp-bio-drawer__role">Director</p>
+				</div>
+				<h4 class="dp-bio-drawer__quote">Change is the only constant in life</h4>
+				<div class="dp-bio-drawer__body">
+					<p>The businesses that endure are not those that resist change; they are those that lead it.</p>
+					<p>At Group Delta, innovation is not a department or a strategy. It is a mindset that runs through everything we do. We invest in technology, in people, and in ideas that keep us ahead, so that our clients always have a partner who is ready for what comes next.</p>
+					<p>We are grateful for the trust that has brought us this far, and energised by the possibilities that lie ahead.</p>
+					<p class="dp-bio-drawer__placeholder"><em>Additional bio content can be added here.</em></p>
+				</div>
+			</div>
+		</div>
+		<div class="dp-bio-drawer__panel" id="dp-bio-mohammed-shahzeer" data-bio-panel="mohammed-shahzeer" role="dialog" aria-modal="true" aria-labelledby="dp-bio-title-mohammed-shahzeer" hidden>
+			<button type="button" class="dp-bio-drawer__close" data-bio-close aria-label="Close bio"><span aria-hidden="true">&times;</span></button>
+			<div class="dp-bio-drawer__scroll">
+				<div class="dp-bio-drawer__meta">
+					<h3 id="dp-bio-title-mohammed-shahzeer">Mohammed Shahzeer</h3>
+					<p class="dp-bio-drawer__role">Director</p>
+				</div>
+				<div class="dp-bio-drawer__body">
+					<p>Diversification is often seen as a business strategy. For us, it is a reflection of curiosity — a genuine desire to learn, adapt and contribute across new frontiers.</p>
+					<p>Paired with a deep commitment to technology, it has allowed Group Delta to grow in ways that are both broad and meaningful. We are present across sectors and markets that matter and we are constantly asking how we can do more, serve better and reach further.</p>
+					<p>The future belongs to those willing to build it. We intend to be among them, and we are honoured to have you alongside us as we do.</p>
+					<p class="dp-bio-drawer__placeholder"><em>Additional bio content can be added here.</em></p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- /wp:html -->
 </main>

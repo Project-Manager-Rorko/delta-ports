@@ -1,9 +1,10 @@
 <!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
-<!-- wp:group {"tagName":"main","className":"dp-main","layout":{"type":"default"}} -->
-<main class="wp-block-group dp-main">
+<!-- wp:group {"tagName":"main","className":"dp-main","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group dp-main" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0">
 <!-- wp:html -->
 <div class="dpx-page">
-	<section class="dpx-inner-hero" style="--dpx-hero-img:url('/wp-content/themes/delta-ports/assets/images/our-operation-delta-port4.webp')">
+
+	<section class="dpx-inner-hero dpx-inner-hero--soft" style="--dpx-hero-img:url('/wp-content/themes/delta-ports/assets/images/our-operation-delta-port4.webp')">
 		<div class="dpx-inner-hero__scrim"></div>
 		<div class="dpx-inner-hero__coords"><span>Carbon</span><span>&mdash;</span><span>neutral</span><span>&mdash;</span><span>terminals</span></div>
 		<div class="dpx-wrap dpx-inner-hero__in">
@@ -16,7 +17,7 @@
 
 	<section class="dpx-sec dpx-sec--line">
 		<div class="dpx-wrap dpx-pstmt dpx-reveal">
-			<p class="dpx-pstmt__big">We embed environmental responsibility into <b>everyday terminal performance.</b></p>
+			<p class="dpx-pstmt__big dpx-pstmt__big--lg">We embed environmental responsibility into <b>everyday terminal performance.</b></p>
 			<div>
 				<p>Delta Ports' sustainability framework is built around key operational priorities that guide decision-making across port-led operations, cargo and terminal infrastructure, and integrated logistics activities.</p>
 				<p>This measured approach ensures that sustainability supports both operational resilience and long-term infrastructure value.</p>
@@ -24,13 +25,24 @@
 		</div>
 	</section>
 
+	<!-- How we operate responsibly — image + principles aligned -->
 	<section class="dpx-sec dpx-sec--line">
 		<div class="dpx-wrap">
-			<div class="dpx-sec__head dpx-reveal"><span class="dpx-eyebrow">Our priorities</span><h2 class="dpx-h2">How we operate responsibly</h2></div>
-			<div class="dpx-princ dpx-reveal">
-				<div class="dpx-princ__item"><span class="dpx-princ__n">01</span><div><h3>Sustainable terminal operations</h3><p>Equipment deployment, yard operations and cargo movement practices are designed to balance operational performance with environmental responsibility and reduced impact.</p></div></div>
-				<div class="dpx-princ__item"><span class="dpx-princ__n">02</span><div><h3>Safety &amp; occupational responsibility</h3><p>Safety is foundational to sustainable operations. Delta Ports prioritises safe working environments through structured procedures, training and continuous monitoring across terminal activities.</p></div></div>
-				<div class="dpx-princ__item"><span class="dpx-princ__n">03</span><div><h3>Compliance &amp; governance</h3><p>Operational controls, documentation and oversight frameworks help ensure environmental and safety standards are met consistently across port-led operations.</p></div></div>
+			<div class="dpx-sec__head dpx-reveal">
+				<span class="dpx-eyebrow">Our priorities</span>
+				<h2 class="dpx-h2">How we operate responsibly</h2>
+			</div>
+			<div class="dpx-phil dpx-reveal">
+				<figure class="dpx-phil__media">
+					<img src="/wp-content/themes/delta-ports/assets/images/commit-sustanability-new-1.webp" alt="How Delta Ports operates responsibly" width="800" height="1000" loading="lazy" decoding="async">
+				</figure>
+				<div class="dpx-phil__list">
+					<div class="dpx-princ">
+						<div class="dpx-princ__item"><span class="dpx-princ__n">01</span><div><h3>Sustainable terminal operations</h3><p>Equipment deployment, yard operations and cargo movement practices are designed to balance operational performance with environmental responsibility and reduced impact.</p></div></div>
+						<div class="dpx-princ__item"><span class="dpx-princ__n">02</span><div><h3>Safety &amp; occupational responsibility</h3><p>Safety is foundational to sustainable operations. Delta Ports prioritises safe working environments through structured procedures, training and continuous monitoring across terminal activities.</p></div></div>
+						<div class="dpx-princ__item"><span class="dpx-princ__n">03</span><div><h3>Compliance &amp; governance</h3><p>Operational controls, documentation and oversight frameworks help ensure environmental and safety standards are met consistently across port-led operations.</p></div></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -47,11 +59,11 @@
 					<li>Dust suppression &amp; process improvements</li>
 				</ul>
 			</div>
-			<div class="dpx-split__media"><img src="/wp-content/themes/delta-ports/assets/images/commit-sustanability-new-2.webp" alt="Sustainable operations" loading="lazy"></div>
+			<div class="dpx-split__media"><img src="/wp-content/themes/delta-ports/assets/images/commit-sustanability-new-2.webp" alt="Sustainable operations" loading="lazy" decoding="async"></div>
 		</div>
 	</section>
 
-	<section class="dpx-sec dpx-sec--line">
+	<section class="dpx-sec dpx-sec--line dpx-sec--flush">
 		<div class="dpx-wrap">
 			<div class="dpx-sec__head dpx-reveal"><span class="dpx-eyebrow">FAQ</span><h2 class="dpx-h2">Frequently asked questions</h2></div>
 			<div class="dpx-faq dpx-reveal">
@@ -62,6 +74,7 @@
 			</div>
 		</div>
 	</section>
+
 </div>
 <!-- /wp:html -->
 </main>

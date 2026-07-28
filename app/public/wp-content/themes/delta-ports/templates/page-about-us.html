@@ -1,12 +1,16 @@
 <!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"dp-main","layout":{"type":"default"}} -->
-<main class="wp-block-group dp-main">
+<!-- wp:group {"tagName":"main","className":"dp-main","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group dp-main" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0">
 <!-- wp:html -->
 <div class="dpx-page">
 
-	<!-- HERO -->
-	<section class="dpx-inner-hero" style="--dpx-hero-img:url('/wp-content/themes/delta-ports/assets/images/PLO-banner-scaled.webp')">
+	<!-- HERO (video-ready; swap source when new asset is provided) -->
+	<section class="dpx-inner-hero dpx-inner-hero--full dpx-inner-hero--soft has-video" style="--dpx-hero-img:url('/wp-content/themes/delta-ports/assets/images/PLO-banner-scaled.webp')">
+		<video class="dpx-inner-hero__media" autoplay muted loop playsinline preload="metadata"
+			poster="/wp-content/themes/delta-ports/assets/images/PLO-banner-scaled.webp">
+			<source src="/wp-content/themes/delta-ports/assets/video/about-banner.mp4" type="video/mp4">
+		</video>
 		<div class="dpx-inner-hero__scrim"></div>
 		<div class="dpx-inner-hero__coords"><span>N 12.90&deg;</span><span>&mdash;</span><span>E 74.87&deg;</span><span>&mdash;</span><span>Mangalore</span></div>
 		<div class="dpx-wrap dpx-inner-hero__in">
@@ -77,11 +81,22 @@
 	<!-- OPERATING PHILOSOPHY -->
 	<section class="dpx-sec dpx-sec--line">
 		<div class="dpx-wrap">
-			<div class="dpx-sec__head dpx-reveal"><span class="dpx-eyebrow">How we operate</span><h2 class="dpx-h2">Operating philosophy</h2><p class="dpx-lead" style="margin-top:1rem">Operations at Delta Ports are guided by three core principles that ensure reliability and long-term efficiency.</p></div>
-			<div class="dpx-princ dpx-reveal">
-				<div class="dpx-princ__item"><span class="dpx-princ__n">01</span><div><h3>Operational discipline</h3><p>Structured processes, safety protocols and operational readiness ensure reliable terminal performance and efficient vessel turnaround.</p></div></div>
-				<div class="dpx-princ__item"><span class="dpx-princ__n">02</span><div><h3>Infrastructure stewardship</h3><p>Terminal assets are managed with a long-term perspective, balancing capacity, maintenance and upgrades to support sustained efficiency and operational continuity.</p></div></div>
-				<div class="dpx-princ__item"><span class="dpx-princ__n">03</span><div><h3>Connectivity &amp; coordination</h3><p>Operations are integrated with road, rail and maritime networks, enabling coordinated cargo movement between ports and hinterland destinations through seamless multimodal connectivity.</p></div></div>
+			<div class="dpx-sec__head dpx-reveal">
+				<span class="dpx-eyebrow">How we operate</span>
+				<h2 class="dpx-h2">Operating philosophy</h2>
+				<p class="dpx-lead" style="margin-top:1rem">Operations at Delta Ports are guided by three core principles that ensure reliability and long-term efficiency.</p>
+			</div>
+			<div class="dpx-phil dpx-reveal">
+				<figure class="dpx-phil__media">
+					<img src="/wp-content/themes/delta-ports/assets/images/Component-23.webp" alt="Operating philosophy at Delta Ports" width="800" height="1000" loading="lazy" decoding="async">
+				</figure>
+				<div class="dpx-phil__list">
+					<div class="dpx-princ">
+						<div class="dpx-princ__item"><span class="dpx-princ__n">01</span><div><h3>Operational discipline</h3><p>Structured processes, safety protocols and operational readiness ensure reliable terminal performance and efficient vessel turnaround.</p></div></div>
+						<div class="dpx-princ__item"><span class="dpx-princ__n">02</span><div><h3>Infrastructure stewardship</h3><p>Terminal assets are managed with a long-term perspective, balancing capacity, maintenance and upgrades to support sustained efficiency and operational continuity.</p></div></div>
+						<div class="dpx-princ__item"><span class="dpx-princ__n">03</span><div><h3>Connectivity &amp; coordination</h3><p>Operations are integrated with road, rail and maritime networks, enabling coordinated cargo movement between ports and hinterland destinations through seamless multimodal connectivity.</p></div></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -103,8 +118,8 @@
 		</div>
 	</section>
 
-	<!-- RECOGNITION -->
-	<section class="dpx-sec dpx-sec--line">
+	<!-- RECOGNITION (flush into pre-footer CTA) -->
+	<section class="dpx-sec dpx-sec--line dpx-sec--flush">
 		<div class="dpx-wrap">
 			<div class="dpx-sec__head dpx-reveal"><span class="dpx-eyebrow">Recognition</span><p class="dpx-lead" style="margin-top:.8rem;max-width:46ch">From its origins in shipping and logistics, Group Delta has evolved into a diversified infrastructure-led enterprise.</p></div>
 			<div class="dpx-recg__row dpx-reveal">

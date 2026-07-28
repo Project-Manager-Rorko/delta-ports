@@ -1707,8 +1707,9 @@
 	--dp-radius-sm: 6px;
 }
 
-.dp-site-header {
-	padding-top: 1rem !important;
+.dp-site-header,
+#dp-site-header {
+	padding-top: 0 !important;
 }
 
 .dp-site-header__bar {
@@ -1787,8 +1788,9 @@
 }
 
 @media (max-width: 640px) {
-	.dp-site-header {
-		padding-top: 0.75rem !important;
+	.dp-site-header,
+	#dp-site-header {
+		padding-top: 0 !important;
 	}
 
 	.dp-site-header__bar {

@@ -601,13 +601,14 @@ a {
 	width: 100% !important;
 	z-index: 99999 !important;
 	float: left;
-	padding-left: 0 !important;
 	transform: translateZ(0);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	/* Floating pill shell (reference: frosted dark bar) — submenu panels unchanged */
-	padding: 0.65rem clamp(0.75rem, 3vw, 1.5rem) 0;
+	/* Flush to top — no floating top gap */
+	padding-top: 0 !important;
 	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding-bottom: 0 !important;
 	pointer-events: none;
 }
 
@@ -628,18 +629,43 @@ body.admin-bar #dp-site-header {
 	}
 }
 
-/* Content starts below fixed header (non-banner pages keep this offset) */
+/* Content starts below fixed header (non-banner pages keep this offset).
+   Banner / cinematic pages zero this in elevate.css + elevate-global.css. */
 body {
 	padding-top: var(--dp-header-h) !important;
+}
+
+/* Force no top gap on pages whose first content is a full-bleed hero banner */
+body.home,
+body:has(.dpx-hero),
+body:has(.dpx-inner-hero),
+body:has(.dpx-home),
+body:has(.dpx-page) {
+	padding-top: 0 !important;
 }
 
 body.admin-bar {
 	padding-top: calc(var(--dp-header-h) + 32px) !important;
 }
 
+body.admin-bar.home,
+body.admin-bar:has(.dpx-hero),
+body.admin-bar:has(.dpx-inner-hero),
+body.admin-bar:has(.dpx-home),
+body.admin-bar:has(.dpx-page) {
+	padding-top: 32px !important; /* WP admin bar only */
+}
+
 @media screen and (max-width: 782px) {
 	body.admin-bar {
 		padding-top: calc(var(--dp-header-h) + 46px) !important;
+	}
+	body.admin-bar.home,
+	body.admin-bar:has(.dpx-hero),
+	body.admin-bar:has(.dpx-inner-hero),
+	body.admin-bar:has(.dpx-home),
+	body.admin-bar:has(.dpx-page) {
+		padding-top: 46px !important;
 	}
 }
 
@@ -656,11 +682,19 @@ body.admin-bar {
 .dp-gb-home-hero,
 .dp-gb-page-hero,
 .aw-hero,
-.aw-inner-hero {
+.aw-inner-hero,
+.dpx-inner-hero {
 	margin-top: calc(-1 * var(--dp-header-h, 72px)) !important;
 	position: relative;
 	z-index: 1;
 	top: 0;
+}
+
+/* When body offset is already zero, do not pull the hero further up */
+body:has(.dpx-page) .dpx-inner-hero,
+body:has(.dpx-inner-hero) .dpx-inner-hero,
+body.home .dpx-hero {
+	margin-top: 0 !important;
 }
 
 body.admin-bar .dp-home-hero,
@@ -675,6 +709,12 @@ body.admin-bar .aw-inner-hero {
 	margin-top: calc(-1 * (var(--dp-header-h, 72px) + 32px)) !important;
 }
 
+body.admin-bar:has(.dpx-page) .dpx-inner-hero,
+body.admin-bar:has(.dpx-inner-hero) .dpx-inner-hero,
+body.admin-bar.home .dpx-hero {
+	margin-top: 0 !important;
+}
+
 @media screen and (max-width: 782px) {
 	body.admin-bar .dp-home-hero,
 	body.admin-bar .dp-ops-hero,
@@ -686,6 +726,11 @@ body.admin-bar .aw-inner-hero {
 	body.admin-bar .aw-hero,
 	body.admin-bar .aw-inner-hero {
 		margin-top: calc(-1 * (var(--dp-header-h, 72px) + 46px)) !important;
+	}
+	body.admin-bar:has(.dpx-page) .dpx-inner-hero,
+	body.admin-bar:has(.dpx-inner-hero) .dpx-inner-hero,
+	body.admin-bar.home .dpx-hero {
+		margin-top: 0 !important;
 	}
 }
 

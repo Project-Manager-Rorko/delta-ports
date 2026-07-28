@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 /**
  * Seeds Gutenberg pages/posts/menus on theme activation.
- * Content is stored in post_content as blocks — fully editable in Block Editor.
+ * Content is stored in post_content as blocks â€” fully editable in Block Editor.
  *
  * @package Delta_Ports
  */
@@ -21,7 +21,7 @@ function delta_ports_on_theme_switch() {
 add_action( 'after_switch_theme', 'delta_ports_on_theme_switch' );
 
 /**
- * Admin tool: Tools → Delta Ports Seed.
+ * Admin tool: Tools â†’ Delta Ports Seed.
  */
 function delta_ports_seed_admin_menu() {
 	add_management_page(
@@ -360,7 +360,7 @@ function delta_ports_talent_form_properties() {
 		// Mail (2): auto-reply to applicant.
 		'mail_2' => array(
 			'active'             => true,
-			'subject'            => 'We received your application — Delta Ports',
+			'subject'            => 'We received your application â€” Delta Ports',
 			'sender'             => 'Delta Ports <' . $site_mail . '>',
 			'body'               => "Hello [full-name],\n\nThank you for applying to the Delta Ports Talent Network. We have received your details and will review your application.\n\nIf your profile matches our current or upcoming opportunities, our team will get in touch.\n\nRegards,\nDelta Ports Talent Team\n" . $site_mail,
 			'recipient'          => '[email]',
@@ -449,7 +449,7 @@ function delta_ports_business_form_properties() {
 		),
 		'mail_2' => array(
 			'active'             => true,
-			'subject'            => 'We received your enquiry — Delta Ports',
+			'subject'            => 'We received your enquiry â€” Delta Ports',
 			'sender'             => 'Delta Ports <' . $site_mail . '>',
 			'body'               => "Hello [your-name],\n\nThank you for contacting Delta Ports. We have received your message and will respond shortly.\n\nRegards,\nDelta Ports\n" . $site_mail,
 			'recipient'          => '[your-email]',
@@ -473,7 +473,7 @@ function delta_ports_seed_all( $force = false ) {
 			'title'   => 'Home',
 			'content' => delta_ports_content_home(),
 			'seo_t'   => 'Delta Ports | Terminal Operations & Port Logistics',
-			'seo_d'   => 'Delta Ports provides deep-water terminal infrastructure and port logistics powering India’s maritime trade.',
+			'seo_d'   => 'Delta Ports provides deep-water terminal infrastructure and port logistics powering Indiaâ€™s maritime trade.',
 			'front'   => true,
 		),
 		array(
@@ -481,7 +481,7 @@ function delta_ports_seed_all( $force = false ) {
 			'title'   => 'About Us',
 			'content' => delta_ports_content_about(),
 			'seo_t'   => 'About Delta Ports | Port Terminal Operations India',
-			'seo_d'   => 'Learn about Delta Ports — port-led infrastructure and terminal operations across India.',
+			'seo_d'   => 'Learn about Delta Ports â€” port-led infrastructure and terminal operations across India.',
 		),
 		array(
 			'slug'    => 'leadership',
@@ -495,7 +495,7 @@ function delta_ports_seed_all( $force = false ) {
 			'title'   => 'Port-Led Operation',
 			'content' => delta_ports_content_port_led(),
 			'seo_t'   => 'Port-Led Operations | Delta Ports Terminal Services',
-			'seo_d'   => 'Integrated terminal operations across India’s strategic maritime gateways.',
+			'seo_d'   => 'Integrated terminal operations across Indiaâ€™s strategic maritime gateways.',
 		),
 		array(
 			'slug'    => 'led-operations',
@@ -601,9 +601,9 @@ function delta_ports_seed_all( $force = false ) {
 		array(
 			'slug'  => 'indias-logistics-sector-big-opportunity-for-investors',
 			'title' => "India's logistics sector big opportunity for investors",
-			'body'  => '<!-- wp:paragraph --><p>India’s logistics sector continues to present significant opportunity for infrastructure and supply-chain investors.</p><!-- /wp:paragraph -->',
+			'body'  => '<!-- wp:paragraph --><p>Indiaâ€™s logistics sector continues to present significant opportunity for infrastructure and supply-chain investors.</p><!-- /wp:paragraph -->',
 			'seo_t' => "India's logistics sector big opportunity for investors - Delta Ports",
-			'seo_d' => 'Media update on India’s logistics growth and investment opportunity.',
+			'seo_d' => 'Media update on Indiaâ€™s logistics growth and investment opportunity.',
 			'image' => 'media-update2.webp',
 		),
 		array(
@@ -725,3 +725,33 @@ function delta_ports_seed_menus() {
 	$locations['primary'] = $menu_id;
 	set_theme_mod( 'nav_menu_locations', $locations );
 }
+
+/**
+ * Reliable CF7 shortcodes for Contact template (ensures forms exist).
+ */
+function delta_ports_shortcode_enquiry_form() {
+	if ( ! class_exists( 'WPCF7_ContactForm' ) ) {
+		return '<p class="dpx-form-fallback">Contact form is unavailable. Email <a href="mailto:info@deltaports.com">info@deltaports.com</a> or call <a href="tel:+919902395555">+91 99023 95555</a>.</p>';
+	}
+	$id = (int) delta_ports_get_or_create_contact_form( false );
+	if ( ! $id ) {
+		return '<p class="dpx-form-fallback">Unable to load the enquiry form. Please email <a href="mailto:info@deltaports.com">info@deltaports.com</a>.</p>';
+	}
+	return do_shortcode( '[contact-form-7 id="' . $id . '" title="Business Enquiry"]' );
+}
+add_shortcode( 'delta_enquiry_form', 'delta_ports_shortcode_enquiry_form' );
+
+/**
+ * Talent network form shortcode.
+ */
+function delta_ports_shortcode_talent_form() {
+	if ( ! class_exists( 'WPCF7_ContactForm' ) || ! function_exists( 'delta_ports_get_or_create_talent_form' ) ) {
+		return '';
+	}
+	$id = (int) delta_ports_get_or_create_talent_form( false );
+	if ( ! $id ) {
+		return '';
+	}
+	return do_shortcode( '[contact-form-7 id="' . $id . '" title="Talent Network"]' );
+}
+add_shortcode( 'delta_talent_form', 'delta_ports_shortcode_talent_form' );

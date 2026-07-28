@@ -119,9 +119,14 @@ function delta_ports_ops_hero( $crumb, $title, $lead, $image ) {
  * @return string
  */
 function delta_ports_content_port_led() {
-	$hero_img = file_exists( DELTA_PORTS_DIR . '/assets/images/PLO-banner-scaled.webp' )
-		? 'PLO-banner-scaled.webp'
-		: 'port-led-operation-new-banner-img.webp';
+	// Prefer newest banner from live reference; fall back to earlier assets.
+	if ( file_exists( DELTA_PORTS_DIR . '/assets/images/port-led-operation-newer-banner-img-scaled.webp' ) ) {
+		$hero_img = 'port-led-operation-newer-banner-img-scaled.webp';
+	} elseif ( file_exists( DELTA_PORTS_DIR . '/assets/images/PLO-banner-scaled.webp' ) ) {
+		$hero_img = 'PLO-banner-scaled.webp';
+	} else {
+		$hero_img = 'port-led-operation-new-banner-img.webp';
+	}
 	// Live parity (vipaccounts Elementor post-4919):
 	// Network map = backgrounlocation.webp | Mormugao = new-delta-port-new1.webp | EQ-3 = new-delta-port-new2.webp
 	$map      = delta_ports_img_or( 'backgrounlocation.webp', 'empowering-with-india.png' );

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Delta Ports block theme functions.
  *
@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DELTA_PORTS_VERSION', '4.5.26' );
+define( 'DELTA_PORTS_VERSION', '4.5.39' );
 define( 'DELTA_PORTS_DIR', get_template_directory() );
 define( 'DELTA_PORTS_URI', get_template_directory_uri() );
 
@@ -20,3 +20,4 @@ require_once DELTA_PORTS_DIR . '/inc/patterns.php';
 require_once DELTA_PORTS_DIR . '/inc/seed-content.php';
 require_once DELTA_PORTS_DIR . '/inc/staging-guard.php';
 require_once DELTA_PORTS_DIR . '/inc/redirects.php';
+

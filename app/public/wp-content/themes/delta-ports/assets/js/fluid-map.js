@@ -15,20 +15,21 @@
 	}
 
 	ready(function () {
-		var host = document.querySelector('.dp-home-business__fluid, .container-dot-animation');
+		var host = document.querySelector('.dpx-biz__fluid, .dp-home-business__fluid, .container-dot-animation');
 		var canvas = document.getElementById('fluidCanvas');
 
 		// WP KSES may strip <canvas> from post content — recreate it.
 		if (!canvas && host) {
 			var mapSrc =
 				host.getAttribute('data-src') ||
+				host.getAttribute('data-map-src') ||
 				(host.style && host.style.backgroundImage
 					? (host.style.backgroundImage.match(/url\(["']?([^"')]+)/) || [])[1]
 					: '') ||
 				'';
 			// Prefer map URL from page if data-src missing.
 			if (!mapSrc) {
-				var pageMap = document.querySelector('.dp-home-business [data-map-src]');
+				var pageMap = document.querySelector('.dpx-biz [data-map-src], .dp-home-business [data-map-src]');
 				if (pageMap) mapSrc = pageMap.getAttribute('data-map-src') || '';
 			}
 			if (!mapSrc) {
@@ -66,6 +67,13 @@
 			if (src) {
 				fallback.style.backgroundImage = 'url("' + src + '")';
 			}
+			// Dark cinematic Our Business: black plate behind map
+			if (
+				fallback.classList.contains('dpx-biz__fluid') ||
+				(fallback.closest && fallback.closest('.dpx-biz'))
+			) {
+				fallback.style.backgroundColor = '#0A0F1E';
+			}
 			canvas.style.display = 'none';
 		}
 
@@ -74,6 +82,11 @@
 			return;
 		}
 
+		// Dark cinematic map (dpx-biz) uses black base; legacy white map uses white base.
+		var darkMap =
+			!!(host && (host.classList.contains('dpx-biz__fluid') || host.closest('.dpx-biz'))) ||
+			!!document.querySelector('.dpx-biz');
+
 		var gl =
 			canvas.getContext('webgl', { antialias: false, alpha: false }) ||
 			canvas.getContext('experimental-webgl', { antialias: false, alpha: false });
@@ -81,6 +94,13 @@
 		if (!gl) {
 			showStatic();
 			return;
+		}
+
+		// Clear to black on dark home business section.
+		if (darkMap) {
+			gl.clearColor(0.039, 0.059, 0.118, 1.0); // #0A0F1E
+		} else {
+			gl.clearColor(1.0, 1.0, 1.0, 1.0);
 		}
 
 		var vertexShaderSrc =
@@ -92,6 +112,8 @@
 			'  gl_Position = vec4(a_position, 0.0, 1.0);' +
 			'}';
 
+		// Outside-map + transparent mix color: black for dpx-biz, white for legacy.
+		var baseRgb = darkMap ? '0.039, 0.059, 0.118' : '1.0, 1.0, 1.0';
 		var fragmentShaderSrc =
 			'precision highp float;' +
 			'uniform sampler2D u_image;' +
@@ -123,10 +145,10 @@
 			'  vec2 distorted_uv = uv + distortion;' +
 			'  vec2 image_uv = (distorted_uv - 0.5) / u_scale + 0.5;' +
 			'  if (image_uv.x < 0.0 || image_uv.x > 1.0 || image_uv.y < 0.0 || image_uv.y > 1.0) {' +
-			'    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);' +
+			'    gl_FragColor = vec4(' + baseRgb + ', 1.0);' +
 			'  } else {' +
 			'    vec4 texColor = texture2D(u_image, image_uv);' +
-			'    gl_FragColor = vec4(mix(vec3(1.0), texColor.rgb, texColor.a), 1.0);' +
+			'    gl_FragColor = vec4(mix(vec3(' + baseRgb + '), texColor.rgb, texColor.a), 1.0);' +
 			'  }' +
 			'}';
 

@@ -170,6 +170,14 @@ function delta_ports_allow_kses_media( $tags ) {
 		'type'  => true,
 		'media' => true,
 	);
+	$tags['canvas'] = array(
+		'id'     => true,
+		'class'  => true,
+		'width'  => true,
+		'height' => true,
+		'style'  => true,
+		'data-*' => true,
+	);
 	$tags['svg'] = array(
 		'class'       => true,
 		'aria-hidden' => true,

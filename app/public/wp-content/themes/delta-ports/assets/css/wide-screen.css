@@ -43,11 +43,12 @@
 /* Refined floating shell: loaded after the theme's local parity rules. */
 .dp-mobile-nav__top,
 .dp-mobile-nav__actions { display: none; }
-.dp-site-header {
-	--dp-floating-top: clamp(0.75rem, 1.4vw, 1.25rem);
+.dp-site-header,
+#dp-site-header {
+	--dp-floating-top: 0;
 	--dp-floating-h: 96px;
-	padding-top: var(--dp-floating-top) !important;
-	padding-inline: clamp(0.75rem, 2vw, 1.5rem) !important;
+	padding-top: 0 !important;
+	padding-inline: 0 !important;
 }
 .dp-site-header__bar {
 	max-width: min(var(--dp-layout-max, 1400px), calc(100% - 2rem));
@@ -176,7 +177,7 @@
 .dp-nav-backdrop { top: calc(var(--dp-floating-top) + var(--dp-floating-h)); background: rgba(12, 12, 20, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 10040; }
 
 @media (max-width: 960px) {
-	.dp-site-header { --dp-floating-top: 0.75rem; --dp-floating-h: 72px; padding-top: var(--dp-floating-top) !important; padding-inline: 0.75rem !important; }
+	.dp-site-header,#dp-site-header { --dp-floating-top: 0; --dp-floating-h: 72px; padding-top: 0 !important; padding-inline: 0 !important; }
 	.dp-site-header__bar { max-width: 100%; border-radius: 13px; }
 	.dp-site-header__inner { width: 100%; min-height: var(--dp-floating-h); padding: 0 0.75rem; display: flex; }
 	.dp-site-header.is-compact .dp-site-header__inner { min-height: var(--dp-floating-h); }

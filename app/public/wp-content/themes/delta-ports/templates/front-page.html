@@ -5,12 +5,12 @@
 <!-- wp:html -->
 <div class="dpx-home">
 
-  <!-- HERO -->
-  <header class="dpx-hero" id="dpx-hero">
+  <!-- HERO: 100vh banner video -->
+  <header class="dpx-hero dpx-hero--compact" id="dpx-hero">
     <video class="dpx-hero__media" autoplay muted loop playsinline preload="metadata"
       poster="/wp-content/themes/delta-ports/assets/images/PLO-banner-scaled.webp">
-      <source src="/wp-content/themes/delta-ports/assets/video/home-banner-alt.mp4" type="video/mp4">
-      <source src="/wp-content/themes/delta-ports/assets/video/home-banner.mp4" type="video/mp4">
+      <source src="https://vipaccounts.org/delta-ports/wp-content/uploads/2026/05/delta-port-new-banner-second-updated.mp4" type="video/mp4">
+      <source src="/wp-content/themes/delta-ports/assets/video/delta-port-new-banner-second-updated.mp4" type="video/mp4">
     </video>
     <div class="dpx-hero__grade"></div>
     <div class="dpx-hero__coords"><span>N 12.90&deg;</span><span>&mdash;</span><span>E 74.87&deg;</span><span>&mdash;</span><span>Mangalore</span></div>
@@ -27,14 +27,6 @@
         </div>
       </div>
     </div>
-    <div class="dpx-ticker">
-      <div class="dpx-wrap"><div class="dpx-ticker__in">
-        <div class="dpx-tick"><span class="dpx-tick__n">40<em>+</em></span><span class="dpx-tick__l">Years of<br>legacy</span></div>
-        <div class="dpx-tick"><span class="dpx-tick__n">2<em>+</em></span><span class="dpx-tick__l">Deep-water<br>berths</span></div>
-        <div class="dpx-tick"><span class="dpx-tick__n">25<em>M+</em></span><span class="dpx-tick__l">MT cargo<br>handled / yr</span></div>
-        <div class="dpx-tick"><span class="dpx-tick__n">1,200<em>+</em></span><span class="dpx-tick__l">Professionals<br>on the ground</span></div>
-      </div></div>
-    </div>
   </header>
 
   <!-- POSITIONING -->
@@ -48,12 +40,18 @@
     </div>
   </section>
 
-  <!-- IMPACT -->
+  <!-- IMPACT (Scale that moves trade) -->
   <section class="dpx-impact">
     <div class="dpx-wrap">
       <div class="dpx-impact__head dpx-reveal">
-        <div><span class="dpx-eyebrow">By the numbers</span><h2 class="dpx-h2">Scale that moves trade</h2></div>
-        <p class="dpx-lead">Capacity, people and infrastructure behind every shipment.</p>
+        <div class="dpx-impact__title">
+          <span class="dpx-eyebrow">By the numbers</span>
+          <h2 class="dpx-h2">Scale that moves trade</h2>
+        </div>
+        <div class="dpx-impact__aside">
+          <img class="dpx-impact__logo" src="/wp-content/themes/delta-ports/assets/images/Delta-new-logo.svg" alt="Delta Ports" width="160" height="48" loading="lazy" decoding="async" />
+          <p class="dpx-lead">Capacity, people and infrastructure behind every shipment.</p>
+        </div>
       </div>
       <div class="dpx-impact__grid dpx-reveal">
         <div class="dpx-metric"><div class="dpx-metric__n" data-to="40">0<em>+</em></div><div class="dpx-metric__l">Years of legacy</div></div>
@@ -85,21 +83,46 @@
     </div></div>
   </section>
 
-  <!-- NETWORK -->
-  <section class="dpx-net" id="dpx-business">
-    <div class="dpx-wrap dpx-net__grid dpx-reveal">
-      <div class="dpx-net__map" aria-hidden="true">
-        <span class="dpx-net__pin a"><span>Marmagoa</span><em>West coast</em></span>
-        <span class="dpx-net__pin b"><span>Vizag</span><em>East coast</em></span>
+  <!-- OUR BUSINESS — Global Presence layout (dark cinematic, matches reference structure) -->
+  <section class="dpx-biz" id="dpx-business">
+    <div class="dpx-wrap dpx-biz__inner dpx-reveal">
+      <div class="dpx-biz__copy">
+        <h2 class="dpx-h2">Our Business</h2>
+        <p>With operations rooted in India and expanding across the Middle East and key trade corridors, Group Delta supports regional and international infrastructure and logistics requirements.</p>
       </div>
-      <div>
-        <span class="dpx-eyebrow">Our network</span>
-        <h2 class="dpx-h2">Two coasts,<br>one operator</h2>
-        <div class="dpx-net__list">
-          <div class="dpx-net__item"><div><h4>Delta Marmagoa Port</h4><p>West coast &middot; multi-cargo gateway</p></div><span>01</span></div>
-          <div class="dpx-net__item"><div><h4>Delta Vizag Port</h4><p>East coast &middot; operations &amp; maintenance</p></div><span>02</span></div>
-          <div class="dpx-net__item"><div><h4>Root Delta &mdash; Oman</h4><p>Gulf &middot; regional reach</p></div><span>03</span></div>
+
+      <div class="dpx-biz__stage">
+        <!-- Fluid WebGL map (live parity) — map image already includes DELTA wordmark -->
+        <div class="dpx-biz__fluid dp-home-business__fluid container-dot-animation"
+          data-src="/wp-content/themes/delta-ports/assets/images/delta-map-sec-bg-new-scaled-1.webp"
+          data-map-src="/wp-content/themes/delta-ports/assets/images/delta-map-sec-bg-new-scaled-1.webp"
+          style="background-image:url('/wp-content/themes/delta-ports/assets/images/delta-map-sec-bg-new-scaled-1.webp')"
+          aria-hidden="true">
+          <canvas id="fluidCanvas" data-src="/wp-content/themes/delta-ports/assets/images/delta-map-sec-bg-new-scaled-1.webp" width="1280" height="520"></canvas>
         </div>
+
+        <div class="dpx-biz__stats">
+          <div class="dpx-biz__stat">
+            <strong>40+</strong>
+            <span>Years of Expertise</span>
+          </div>
+          <div class="dpx-biz__stat dpx-biz__stat--right">
+            <strong>1400+</strong>
+            <span>Vessels Handled</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dpx-biz__brands" aria-label="Group companies">
+        <span>Delta Ports</span>
+        <span>Delta Global</span>
+        <span>Worldwide Shipping</span>
+        <span>Root Delta - Oman</span>
+        <span>World wide automotive</span>
+        <span>DIWL Technologies</span>
+        <span>Tech Delta</span>
+        <span>Delta Construction</span>
+        <span>Delta (UAE)</span>
       </div>
     </div>
   </section>
@@ -118,8 +141,8 @@
     </div>
   </section>
 
-  <!-- RECOGNITION -->
-  <section class="dpx-rec-sec">
+  <!-- RECOGNITION (flush into CTA) -->
+  <section class="dpx-rec-sec dpx-rec-sec--flush">
     <div class="dpx-wrap">
       <div class="dpx-rec-head dpx-reveal"><div><span class="dpx-eyebrow">Recognition</span></div><p class="dpx-lead" style="max-width:40ch">Recognised across India's shipping and logistics sector.</p></div>
       <div class="dpx-rec__row dpx-reveal">
