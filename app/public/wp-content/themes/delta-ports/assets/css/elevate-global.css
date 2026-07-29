@@ -424,7 +424,7 @@ body.home .dp-main,body:has(.dpx-page) .dp-main,body:has(.dpx-inner-hero) .dp-ma
 @media(max-width:800px){.dpx-split{grid-template-columns:1fr}.dpx-split__media{order:-1;min-height:240px;aspect-ratio:16/10}.dpx-split--eq .dpx-split__media{min-height:240px}}
 /* partners strip — original colors, larger logos */
 .dpx-partners2{display:flex;flex-wrap:wrap;gap:clamp(1.8rem,4vw,3.2rem) clamp(2rem,5vw,4rem);align-items:center;justify-content:center;padding:.4rem 0}
-.dpx-partners2 img{height:clamp(48px,5.5vw,72px);width:auto;max-width:160px;object-fit:contain;filter:none;opacity:1;transition:transform .3s,opacity .3s}
+.dpx-partners2 img{height:90px;width:auto;max-width:220px;object-fit:contain;filter:none;opacity:1;transition:transform .3s,opacity .3s}
 .dpx-partners2 img:hover{opacity:.9;transform:scale(1.04)}
 /* recognition (inner) */
 .dpx-recg__row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--dpx-linew);border:1px solid var(--dpx-linew)}
