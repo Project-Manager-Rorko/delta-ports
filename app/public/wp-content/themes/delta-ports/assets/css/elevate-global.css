@@ -550,7 +550,7 @@ body.page-privacy-policy .dp-main,body.page-terms-conditions .dp-main{background
 /* Match site display / section heading scale used before legal restyle */
 .dpx-legal h1{color:#fff!important;font-family:var(--dpx-display)!important;font-size:clamp(2.8rem,6vw,5.4rem);line-height:.98;margin:0 0 1.5rem;font-weight:700;letter-spacing:0;text-transform:none}
 .dpx-legal h2{color:#fff!important;font-family:var(--dpx-display)!important;font-size:clamp(1.5rem,2.4vw,2.1rem);line-height:1.15;margin:2.2rem 0 .85rem;font-weight:700;letter-spacing:0}
-.dpx-legal p,.dpx-legal li{color:rgba(255,255,255,.78)!important;font-size:1.05rem;line-height:1.75;margin:0 0 1rem;max-width:72ch}
+.dpx-legal p,.dpx-legal li{color:rgba(255,255,255,.78)!important;font-size:1.05rem;line-height:1.75;margin:0 0 1rem;max-width:100%}
 .dpx-legal ul{margin:0 0 1.2rem;padding-left:1.2rem}
 .dpx-legal li{margin-bottom:.45rem}
 .dpx-legal a{color:var(--dpx-red)!important}
