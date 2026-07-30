@@ -624,6 +624,24 @@ main.dp-main{
 	padding-top:0!important;
 }
 .wp-site-blocks > * + *{margin-block-start:0!important}
+/* The fixed header's block wrapper must not reserve a strip above heroes. */
+.wp-site-blocks > header.wp-block-template-part{
+	height:0!important;
+	min-height:0!important;
+	margin:0!important;
+	margin-block:0!important;
+	padding:0!important;
+	padding-block:0!important;
+	line-height:normal!important;
+}
+.wp-site-blocks > main.dp-main{
+	margin-block-start:0!important;
+	padding-block-start:0!important;
+}
+/* WordPress prints the skip link before this wrapper; cancel its anonymous line box. */
+body > .wp-site-blocks{
+	margin-block-start:-1.65em!important;
+}
 /* Heroes start at the top of the document flow */
 .dpx-hero,
 .dpx-inner-hero,
@@ -637,4 +655,33 @@ main.dp-main{
 html body:not(.home):not(.front-page):not(:has(.dpx-hero)):not(:has(.dpx-inner-hero)):not(:has(.dpx-page)) main.dp-main,
 html body:not(.home):not(.front-page):not(:has(.dpx-hero)):not(:has(.dpx-inner-hero)):not(:has(.dpx-page)) .dp-main{
 	padding-top:var(--dp-header-h,88px)!important;
+}
+
+/* Content media: rounded edges without an extra image frame. */
+.dpx-home .dpx-opcard,
+.dpx-home .dpx-sus__media,
+.dpx-page .dpx-phil__media,
+.dpx-page .dpx-split__media,
+.dpx-page .dpx-cap-card__media,
+body.page-id-149 .dp-media-card__media {
+	border:0;
+	border-radius:12px;
+	overflow:hidden;
+}
+
+.dpx-page .dpx-phil__media,
+.dpx-page .dpx-split__media,
+.dpx-page .dpx-cap-card__media {
+	background:transparent;
+}
+
+.dpx-page .dpx-phil__media img,
+.dpx-page .dpx-split__media img,
+.dpx-page .dpx-cap-card__media img,
+.dpx-home .dpx-sus__media img {
+	border-radius:0;
+}
+
+body.page-id-149 .dp-media-card {
+	border-radius:12px;
 }
