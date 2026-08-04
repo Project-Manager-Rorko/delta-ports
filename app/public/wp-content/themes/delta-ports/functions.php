@@ -21,3 +21,12 @@ require_once DELTA_PORTS_DIR . '/inc/seed-content.php';
 require_once DELTA_PORTS_DIR . '/inc/staging-guard.php';
 require_once DELTA_PORTS_DIR . '/inc/redirects.php';
 
+
+// Showcase Agentation
+add_action("wp_footer", function() {
+    ?>
+    <div id="agentation-root"></div>
+    <script src="<?php echo get_template_directory_uri(); ?>/agentation-bundle.js"></script>
+    <?php
+});
+
